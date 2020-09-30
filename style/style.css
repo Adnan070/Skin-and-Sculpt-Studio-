@@ -1,0 +1,781 @@
+/*
+Theme Name: Makeup Pro
+Theme URI: https://gracethemes.com/themes/cosmetics-wordpress-theme/
+Author: Grace Themes
+Author URI: https://www.gracethemes.com/
+Description: Makeup Pro is an impressive, graphically polished, resourceful, smoothly and dynamic, clean coded and well structured, robust and reliable, flexible and highly responsive, multi-purpose Cosmetics WordPress theme for Makeup Artist and Other Fashion Industry. It is perfect for online cosmetics, make-up and beauty shops and other beauty businesses. It’s a perfect platform for introducing your beauty business to the world and capture new customer and connect with your existing clients. Demo: http://gracethemesdemo.com/makeup/
+
+Version: pro 1.0
+License: GNU General Public License version 3
+License URI: license.txt
+Text Domain: makeup-pro
+Tags:one-column,two-columns,left-sidebar,right-sidebar,custom-background,custom-header,custom-menu,featured-images,theme-options,full-width-template,sticky-post,threaded-comments,translation-ready
+
+Makeup Pro WordPress Theme has been created by Grace Themes(gracethemes.com), 2019.
+Makeup Pro WordPress Theme is released under the terms of GNU GPL
+*/
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:400,600,800&display=swap');
+
+*{ margin:0; padding:0; outline:none; box-sizing:border-box; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+body{ margin:0; padding:0; box-sizing:border-box; -ms-word-wrap:break-word; word-wrap:break-word; line-height:26px; margin:0; padding:0; color:#717171; font-size:17px; background-color:#ffffff; }
+img{ margin:0; padding:0; border:none; max-width:100%;}
+section img, img{max-width:100%; height:auto;}
+h1,h2,h3,h4,h5,h6{ margin:0 0 20px; padding:0; line-height:1; font-weight:400; font-family: 'Big Shoulders Text', cursive; }
+h1{ font-size:36px; }
+h2{ font-size:30px;}
+h3{ font-size:18px; }
+h4{ font-size:22px;}
+h5{ font-size:20px; }
+h6{ font-size:14px;}
+.left{float:left;}
+.right{float:right;}
+blockquote{ background:url(images/icon_quote.png) no-repeat 20px 22px; padding:15px 15px 15px 60px !important; font-style:italic; color:#888; font-size:14px; line-height:1.5;}
+.hr{border-bottom:1px solid #333; height:15px; clear:both;}
+p{ margin:0; padding:0;}
+a{ text-decoration:none; outline:none;}
+a:hover{ text-decoration:none; outline:none;}
+ul{ list-style:none; margin:0; padding:0;}
+article ul, article ol{ margin:0 0 15px 15px;}
+article ul li{ list-style: disc;}
+.custom-height{ min-height:20px;}
+.clear{ clear:both;}
+.textwidget select{ width:100%;}
+table{ width:100%}
+.middle-align{ margin:0 auto; padding:0;}
+.wp-caption{ margin:0; padding:0; font-size:13px; max-width:100% !important;}
+.wp-caption-text{ margin:0; padding:0;}
+.sticky{ margin:0; padding:0;}
+.gallery-caption{ margin:0; padding:0;}
+.alignleft, img.alignleft {display: inline; float: left; margin-right:25px; margin-top:4px; margin-bottom:6px; padding:0; height:auto;}
+.alignright, img.alignright { display: inline; float: right; margin-left:25px; height:auto;}
+.aligncenter, img.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; margin-top:0;  height:auto;}
+.comments-area{ margin-bottom:15px;}
+.comment-list .comment-content ul { list-style:none; margin-left:15px;}
+.comment-list .comment-content ul li{margin:5px;}
+.main-container ol{list-style-position:outside; margin-left:20px;}
+.main-container ol li{margin:5px 0;}
+.lastcols{ margin-right:0 !important;}
+.toggleMenu{display:none;}
+section{ padding:80px 0;}
+h2.section_title{font-weight:800; font-size:55px; text-align:center; margin-bottom:40px; padding-bottom:25px; position:relative; }
+h2.section_title::after {
+    border-bottom: 3px solid #111;
+    bottom: 0;
+    content: "";
+    left: 0;
+	right:0;	
+    margin: auto;
+    position: absolute;
+    width:40px;
+}
+
+
+h4.sectionsubtitle{ font-weight:600; font-size:22px; text-align:center; margin-bottom:10px; position:relative;}
+
+.sec_content_main_title{ color:#242424; font-weight:800; font-size:55px; line-height:50px; text-align:left; margin-bottom:50px; position:relative; position:relative;}
+.sec_content_sub_title{ color:#ffffff; font-weight:600; font-size:32px; line-height:32px; text-align:left; margin:0 0 25px; position:relative; }
+
+
+.sitewrapper .header.fixed{ width:100%; }
+.boxlayout{ width:1210px; margin:0 auto; box-shadow:0 5px 10px #000; position:relative; }
+/*.boxlayout .container{ padding:0 20px;}*/
+.boxlayout .footer{ padding:40px 20px;}
+.boxlayout .header.fixed{ width:auto;}
+.boxlayout .trending_right{ padding:5% 0% 4% 5%}
+
+/*Header Info Bar CSS*/
+.headerinfo { font:600 14px/22px 'Assistant'; padding:10px 0; }
+#slider{ width:100%; margin:0; padding:0; position:relative;}
+.logo{ text-align:left; padding:30px 40px; position:absolute; background-color:#fff; z-index:9999; left:40px; -webkit-box-shadow: 0 0 10px rgba(0,0,0, .25);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .25);
+box-shadow: 0 0 10px rgba(0,0,0, .25);
+}
+.logo h1{font-weight:600; margin:0px; }
+.logo a{color:#000;}
+.tagline{ font-size:14px; color:#828181; display:block;}
+.header_right{ float:right; text-align:right; width:68%; padding:25px 0; }
+
+.infobox{ display:inline-block; margin:0 5% 0 0; text-align:left; color:#222; font-size:16px; font-weight:600;}
+.infobox a{ color:#222;}
+.infobox i{ float:left; margin:0 15px 0 0; line-height:28px; text-align:center; font-size:18px; color:#222;}
+h5.headwidjet{ display:none;}
+/* = social icons css
+-------------------------------------------------------------- */
+.social-icons a{ background-color:#f1f1f1; width:40px; height:40px; line-height:40px; border-radius:50%; text-align:center;  vertical-align:middle; display:inline-block; margin:0 5px 0 0; transition:0.6s; -moz-transition:0.6s; -webkit-transition:0.6s; -o-transition:0.6s; font-size:13px; color:#8b929d; }
+.social-icons a:hover{ background-color:#ff6f61; color:#fff !important; }
+.social-icons br{ display:none;}
+
+
+.container{ width:1170px; margin:0 auto; position:relative;}
+
+/*header menu css*/
+.toggle{display: block;}
+.toggle a{width:auto; color:#ffffff; background:url(images/mobilenav.png) no-repeat right center #3e3e3e; padding:18px 25px; margin-top:5px; font-size:16px; text-align:left;}
+.toggle a:hover{color:#ffffff !important;}
+.header.fixed{ position: fixed; top:0; z-index:999999; width:auto;}
+.header.fixed .header_right { padding:15px 0; }
+.header.fixed .sitenav ul li ul li a{ padding-top:7px; padding-bottom:7px; }
+
+.header{width:100%; box-sizing:border-box; position: relative; background-color:#fff }
+.mainmenu{ background-color:#ff6f61; position:relative; padding:0 40px; 
+-webkit-border-top-left-radius: 40px;
+-webkit-border-top-right-radius: 40px;
+-moz-border-radius-topleft: 40px;
+-moz-border-radius-topright: 40px;
+border-top-left-radius: 40px;
+border-top-right-radius: 40px; }
+.sitenav{ padding:0; z-index:9999; float:right; width:75%; text-align:right; text-transform:uppercase; }
+.sitenav ul { margin:0; padding:0; font-family:'Assistant', sans-serif; font-size:15px; font-weight:500; }
+.sitenav ul li{display:inline-block; position:relative;}
+.sitenav ul li:last-child{border-right:none;}
+.sitenav ul li a{padding:18px 18px; display:block; text-align:center; }
+.sitenav ul li ul li{ display:block; position:relative; float:none; top:1px; border-bottom:1px solid #fc8a7e;}
+.sitenav ul li ul li a{ display:block; padding-top:7px; padding-bottom:7px; position:relative; top:1px; text-align:left;}
+
+.sitenav ul li ul{display:none; z-index:9999999; position:relative;}
+.sitenav ul li:hover > ul{display:block; width:200px; position:absolute; left:0; text-align:left; }
+.sitenav ul li:hover ul li ul{display:none; position:relative;}
+.sitenav ul li:hover ul li:hover > ul{display:block; position:absolute; left:200px; top:0;}
+
+.sitenav ul li a:hover, 
+.sitenav ul li.current-menu-item a,
+.sitenav ul li.current-menu-parent a.parent,
+.sitenav ul li.current-menu-item ul.sub-menu li a:hover{ background-color:#fff; }
+.sitenav ul li.current-menu-item ul.sub-menu li a{ background-color: transparent;}
+
+/*new style added*/
+.sitenav ul li.current-menu-parent ul.sub-menu li a.parent.parent-2{ background-color: transparent; color:#fff;}
+.sitenav ul li.current-menu-parent ul.sub-menu li a.parent.parent-2:hover{ background-color: #fff; color:#ff6f61; }
+.sitenav ul li.current-menu-parent ul.sub-menu li ul.sub-menu li a{ color:#fff; }
+.sitenav ul li.current-menu-parent ul.sub-menu li ul.sub-menu li a:hover{ color:#ff6f61; }
+
+.donatenow{ position:absolute; background-color:#fff; color:#fff; font-size:18px; top:0; right:0; padding:18px 35px; }
+.donatenow:hover{color:#fff;}
+
+
+/* = innerbanner css 
+-------------------------------------------------------------- */
+.innerbanner{ text-align:center; }
+.innerbanner img{ position: relative; background-size:cover; width:100%; height:auto;}
+
+/*search form css*/
+.searchbox{position:relative; min-width:35px; width:0%; height:40px; float:right; overflow:hidden;padding-left:20px; -webkit-transition: width 0.3s;    -moz-transition: width 0.3s; -ms-transition: width 0.3s; -o-transition: width 0.3s; transition: width 0.3s;}
+.searchbox-input{top:0; right:0; border:0;outline:0;background:#ece8e8;width:100%;height:40px;margin:0;padding:0px 55px 0px 20px;font-size:13px;color:#7f7f7f;}
+.searchbox-input::-webkit-input-placeholder{color:#7f7f7f;}
+.searchbox-input:-moz-placeholder{color:#7f7f7f;}
+.searchbox-input::-moz-placeholder{color:#7f7f7f;}
+.searchbox-input:-ms-input-placeholder{color:#7f7f7f;}
+.searchbox-icon, .searchbox-submit{width:35px;height:40px;display:block;position:absolute;top:0;font-size:22px;right:0;padding:0 !important;margin:0 !important;border:0 !important;outline:0;line-height:40px;text-align:center;cursor:pointer;color:#dcddd8;background:url(images/search-icon.png) no-repeat center center #34c6f6;}
+.searchbox-open{ width:40%;}
+
+/* = Get An Appointment css
+-------------------------------------------------------------- */
+a.ReadMore{ border:1px solid #a4a4a4; color:#a4a4a4 ; padding:10px 20px; text-transform:uppercase; }
+a.ReadMore:hover{border:1px solid #ef2e2e; color:#ef2e2e; }
+.custombtn{ margin-top:30px;}
+
+a.morebutton{ background-color:#381305; color:#fff ; padding:12px 35px; font-weight:600; display:inline-block; border-radius:25px; text-transform:uppercase;}
+a.morebutton:hover{ background-color:#865628; color:#fff; }
+
+a.borderbutton{ border:1px solid #fff; color:#fff ; padding:12px 25px; display:inline-block; border-radius:25px; text-transform:uppercase;}
+a.borderbutton:hover{ border-color:#ff6f61; color:#ff6f61; }
+
+a.buttonstyle1{ background-color:#865628; color:#fff ; padding:15px 45px; display:inline-block; border-radius:35px; -moz-border-radius:35px;-webkit-border-radius:35px; text-transform:uppercase;}
+a.buttonstyle1:hover{ background-color:#381305; color:#fff; }
+
+.buttonstyle2{ background-color:#555; color:#fff ; padding:6px 15px; font-size:14px; line-height:20px; display:inline-block; border-radius:20px;-moz-border-radius:20px; -webkit-border-radius:20px;}
+.buttonstyle2:hover{ background-color:#fff; color:#555; }
+
+
+/* = Section first css
+-------------------------------------------------------------- */
+#pagearea{ padding:0 0 90px;  z-index:9999; position:relative; }
+.threebox{ width:50%; float:left; padding:35px 25px; position:relative; min-height:200px; box-sizing:border-box; text-align:center;  border-right:1px solid #f4f4f4; border-bottom:1px solid #f4f4f4; }
+.threebox h3{ font-size:24px; font-weight:600; color:#353535; margin:0 0 25px;}
+.threebox:hover h3{color:#fff;}
+.threebox:hover{ background-color:#ff6f61; color:#fff;}
+.threebox .thumbbx{ margin:0 auto 20px auto; overflow:hidden; width:69px; height:69px; position:relative; }
+.threebox .thumbbx img { height:auto; width:100%;}
+.pagecontent{ padding:0; position:relative; }
+a.ReadMore{ background-color:#333339; color:#fff ; padding:5px 15px; display:inline-block;}
+a.ReadMore:hover{ background-color:#ffae00; color:#fff; }
+.pagemore{ color:#111 ; border:1px solid #717171; padding:10px 25px; display:inline-block; border-radius:25px; }
+.pagemore:hover{ color:#111 ; }
+
+/* = Welcome Section CSS
+-------------------------------------------------------------- */
+.pagebox_left{ width:55%; float:left; margin-right:5%;}
+.pagebox_right{ width:40%; float:right; padding:60px 0 40px;}
+.welcome_contentcolumn{ position:relative;}
+.welcome_contentcolumn h3{ font-size:33px; font-weight:600; color:#000000; position:relative; padding-bottom:25px; margin-bottom:35px;}
+.welcome_contentcolumn h3 span{ color:#000000; display:block; font-weight:800; font-size:75px; margin-top:10px;}
+
+.welcome_contentcolumn h3::after {
+    border-bottom: 3px solid #111;
+    bottom: 0;
+    content: "";
+    left: 0;	
+    margin: auto;
+    position: absolute;
+    width:40px;
+}
+
+.pagebox_left_full, .pagebox_right_full{ width:100%; float:none; }
+.pagebox_left_full .threebox{ width:25%; }
+
+
+.welcome_contentcolumn p{ margin-bottom:45px; line-height:28px;}
+
+.wel_services{position:relative; width:100%; display:block; margin:0 0 4% 0; clear:both; transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s; -webkit-transition-duration: 0.5s;}
+.wel_services .aboutme-thumb{ width:45px; height:45px; line-height:45px; float:left; margin:0 30px 0 0;} 
+.wel_services h6{ font-size:20px; margin:0 0 15px 0; font-weight:600; }
+.wel_services p{margin:0 0 20px}
+.wel_services_desc{display:table;}
+
+/* = Section1 Our Hair Clinic Story css
+-------------------------------------------------------------- */
+#section1{ padding:0; position:relative;}
+#section1 .container{ width:100%;}
+.banner_videobox{ position:relative; }
+.banner_videobox img{ display:block;}
+.banner_videobox i{ font-size:30px; color:#ffffff; background-color:#ff6f61; width:80px; height:80px; line-height:80px; -webkit-border-radius:100%; -moz-border-radius:100%;border-radius:100%;}
+.banner_videobox i:hover{ background-color:#000;}
+
+.video-title-desc{ text-align:center; padding:5% 12%; width:100%; position:absolute; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -o-transform:translateY(-50%); -ms-transform:translateY(-50%); z-index:999;}
+.video-title-desc h2{color:#ffffff; margin:0 0 30px; font-size:67px; font-weight:800;}
+.video-title-desc h4{ font-size:30px; color:#ff6f61; margin:0 0 15px;}
+.video-title-desc p{color:#ffffff; margin:0 0 30px;}
+
+/* = Our Passion css
+-------------------------------------------------------------- */
+.about_leftbox{ width:62%; float:left; margin-right:5%}
+.about_rightbox{ width:33%; float:right; padding-top:40px; }
+.about_rightbox img{ display:block; width:100%; box-shadow: 25px -25px 0 0 #e4e4e4; }
+
+.sec_content_main_title{ padding-bottom:40px; margin-bottom:40px;}
+.sec_content_main_title::after {
+    border-bottom: 3px solid #111;
+    bottom: 0;
+    content: "";
+    left: 0;	
+    margin: auto;
+    position: absolute;
+    width:40px;
+}
+
+/* = counter section css
+-------------------------------------------------------------- */
+.counterlist{ float:left; box-sizing:border-box;  width:45%; margin-right:5%;}
+.countricon{ width:110px; height:110px; line-height:110px; margin:0 auto;  float:left; margin:0 30px 0 0; border-radius:50%; position:relative; border:1px solid #ddd;}
+.countricon img{ width:65px; height:45px; position:absolute; top:28%; left:20%; z-index:999;}
+.counterlist .counter{ display:block;  font-size:38px; font-weight:600; color:#111; line-height:50px;}
+.counterlist h6{ font-size:22px; font-weight:600; color:#111; margin:5px 0 10px 0; padding-bottom:20px; position:relative;}
+.counterlist h6::after {
+    border-bottom: 2px dashed #ddd;
+    bottom: 0;
+    content: "";
+    left:140px;	
+    margin: auto;
+    position: absolute;
+    width:75px;
+}
+
+/* = Fashion Trends section3 CSS
+-------------------------------------------------------------- */
+
+#section3{ padding:0;}
+#section3 .owl-controls{ display:none;}
+#section3 .container{ width:100%;}
+.fashiontrendwrap{ position:relative; }
+.fashion_imgbx{ background-color:#e73072; box-sizing:border-box; text-align:center; height:400px; overflow:hidden;}
+.fashion_imgbx img{ width:100%; display:block; height:auto; min-height:100%;}
+.fashion_contentbx{ position:absolute; padding:0 10px 0 40px; left:auto;right:auto; bottom:0; width:100%; }
+.fashiontrendwrap:hover .fashion_imgbx img{opacity:0.3;}
+.titlearea{ margin-bottom:75px;}
+.fashion_contentbx h3{ font-size:37px; color:#fff; font-weight:600; margin-bottom:10px;}
+.fashion_contentbx h6{ font-size:27px; color:#fff; display:block; }
+.fashionmore{ background-color:#ff6f61; color:#fff ; padding:15px 50px; font-size:15px; line-height:20px; display:inline-block; text-transform:uppercase;}
+.fashiontrendwrap:hover .fashionmore{ background-color:#000; color:#fff; }
+
+
+/* = Our Services Section4 CSS
+-------------------------------------------------------------- */
+#section4{ padding-bottom:0;}
+#section4 .subtitle{ padding:0 10%; margin-bottom:50px;}
+.best-featurs{ margin-bottom:40px; margin-top:20px; color:#555; position:relative;}
+.best-featurs .thumb{  float:right; margin:0 0 0 3%; background-color:#ff6f61; font-size:24px; color:#fff; width:75px; height:75px; line-height:75px; border-radius:50%; text-align:center;}
+
+.best-featurs:hover .thumb{ background-color:#111; }
+.best-featurs .thumb img{  width:53px; height:53px; line-height:53px; margin:10px auto;}
+.best-featurs .description{ width:70%;}
+
+.best-featurs h4{ font-size:22px; color:#000000; font-weight:600; margin-bottom:20px; text-transform:uppercase; position:relative; }
+.best-featurs p{ line-height:26px; }
+.best-featurs:hover h4{color:#ff3333;}
+
+#section4 .one_third .best-featurs { text-align:right;}
+#section4 .one_third.last_column .best-featurs{ text-align:left;}
+
+#section4 .one_third.last_column .best-featurs .thumb{  float:left; width:75px; margin:0 5% 0 0; }
+#section4 .one_third.last_column .best-featurs .description{ width:70%; float:right;}
+#section4 .one_third{ margin-bottom:0; vertical-align:top;}
+#section4 .one_third img{ display:block; }
+
+/* = Know Our Rates Section5 CSS
+-------------------------------------------------------------- */
+#section5{ color:#fff;}
+#section5 h2.section_title, #section9 h2.section_title{ color:#fff;}
+#section5 h2.section_title::after, #section9 h2.section_title::after  {
+    border-bottom: 3px solid #fff;
+    bottom: 0;
+    content: "";
+    left: 0;
+	right:0;	
+    margin: auto;
+    position: absolute;
+    width:40px;
+}
+
+.double-imagebox{ position:relative;}
+.first_imgbx{ width:460px; height:420px; overflow:hidden;}
+.first_imgbx img{ height:auto; width:100%;}
+.second_imgbx{ width:400px; height:330px; overflow:hidden; position:relative; float:right; margin:-37% 0 0 0;}
+.second_imgbx img{ height:auto; width:100%;}
+
+.our_rates{ position:relative; margin-bottom:32px; color:#fff;}
+.our_rates h4{ font-size:24px; color:#fff; margin:0 0 10px; position:relative;}
+.our_rates p{ color:#fff; margin:0;}
+.our_rates h4 span{ font-size:24px !important; font-weight:bold; color:#ff6f61; float:right;}
+.our_rates h4 span::after {
+    border-bottom: 1px solid #4a4a4a;
+    bottom: 10px;
+    content: "";   
+	right:60px;	
+    margin: auto;
+    position: absolute;
+    width:60%;
+}
+
+
+/* = Why Our Clients Choose Us Section6 CSS
+-------------------------------------------------------------- */
+#section6 .subtitle{ font-weight:600;}
+.why_choose_left{ width:37%; float:left; margin:0  8% 0 0;}
+.why_choose_right{ width:55%; float:right; margin:0;}
+
+.videobox{ position:relative; text-align:center; width:300px; height:400px; display:block; overflow:hidden; margin:0 0 0 0; float:left;}
+.videobox img{ display:block;}
+.videobox i{ font-size:30px; position:absolute; text-align:center; color:#ffffff; background-color:#ff6f61; width:64px; height:64px; line-height:64px; left:0; right:0; margin:0 auto; top:42%;  -webkit-border-radius:100%; -moz-border-radius:100%;border-radius:100%;}
+.videobox:hover i{ color:#575757; background:#ffffff;}
+.one_img_column{ width:300px; height:400px; margin:100px 0 0 20px; display:inline-block; position:relative;}
+.one_img_column img{ width:100%; height:100%; display:block;}
+.one_img_column::after{ 
+    border: 1px solid #ff6f61;
+    top: -50px;
+    content: "";
+    right: 173px;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    height: 395px;
+    z-index: -9;	
+}
+#section6 .morebutton{ border-radius:0; background-color:#000; padding:10px 40px;}
+
+/* = Why Our Clients Choose Us Section7 CSS
+-------------------------------------------------------------- */
+#section7{ padding:0;}
+.discount_left{ width:45%; float:left; margin:0 5% 0 0;}
+.discount_left img{ display:block;}
+.discount_right{ width:50%; float:right; margin:0; padding:100px 0 50px; color:#fff;}
+.discount_right .sec_content_main_title{ color:#fff; padding-bottom:0;}
+.discount_right .sec_content_main_title::after{ display:none;}
+.discount_right .custombtn{ margin-top:50px;}
+.discount_right a.morebutton{ border-radius:0;}
+
+/* = Static Products Section8 CSS
+-------------------------------------------------------------- */
+#section8 .container { position:relative; margin-bottom:-150px;}
+.static_product_list{ background-color:#e9e9e9; color:#303030; position:relative; width:48%; float:left; margin:0 3% 0 0; }
+.static_product_list .prouctbgimg{ background-position: right top; min-height:320px;}
+.static_product_contentbx{ position:absolute; padding:10px 30px 60px 30px; left:0; right:auto; bottom:0; width:60%; }
+.static_product_contentbx span{ color:#ff6f61; font-size:25px; font-style:italic; display:block; margin-bottom:10px;}
+.static_product_contentbx h3{ font-size:40px; color:#000; font-weight:600; margin-bottom:15px;}
+.static_product_contentbx p{ margin-bottom:15px;}
+.static_product_contentbx .shopnow{ color:#ff6f61; display:inline-block; font-weight:600;}
+.static_product_contentbx .shopnow:hover{ color:#000;}
+
+.static_product_list.last{ margin-right:0; background-position: left top !important;}
+.static_product_list.last .static_product_contentbx{ right:0 !important; left:auto; text-align:right;  }
+.static_product_list.last .prouctbgimg{ margin-right:0; background-position: left top !important;}
+
+/* = Team Member Section9 CSS
+-------------------------------------------------------------- */
+#section9{ color:#fff; background-attachment:scroll !important; background-size:auto !important; }
+#section9 .subtitle{ width:75%; margin: 0 auto 40px auto;}
+#section9 h2.section_title{ padding-top:70px;}
+#section9 .container { position:relative; }
+.teammember-list{ width:23%; float:left; margin:0 2% 10px 0;  position:relative; box-sizing:border-box; text-align:center; border-radius:5px;}
+.teammember-list .thumnailbx{ height:325px; overflow:hidden; background-color:#ff6f61; border-radius:5px;}
+.teammember-list img{ vertical-align:middle; width:100%; height:auto; min-height:275px;}
+.teammember-list span.title{ font-weight:600; color:#101010; font-size:22px; padding-bottom:12px; margin-bottom:0; position:relative; }
+.teammember-list cite{ display:block; font-style:normal; margin-top:0; color:#373735; }
+.teammember-list .titledesbox{ padding:30px 0 0; text-align:center;}
+.member-social-icon{ display:none; position:absolute; width:100%; bottom:55%; text-align:center;}
+.member-social-icon a{ margin:0 5px 0 0; text-align:center; display:inline-block; color:#fff; width:35px; height:35px; line-height:32px; border-radius:50%;}
+.member-social-icon i{ font-size:16px;}
+.member-social-icon a:hover{ color:#fff;}
+.teammember-list:hover .thumnailbx img{ opacity:0.2;}
+.teammember-list:hover .member-social-icon{ display:block;}
+.teammember-list:hover span.title{ color:#ff6f61;}
+
+/* = Team Member Section10 CSS
+-------------------------------------------------------------- */
+#section10{ padding:0;}
+#section10 .container{ width:100%;}
+#section10 .sec_content_main_title{ color:#fff; padding-bottom:25px;}
+#section10 .sec_content_main_title::after{border-color:#fff;}
+.trending_left{ width:39%; float:left;}
+.trending_left img{ display:block;}
+.trending_right{ width:61%; float:right; padding:5% 5% 4%;}
+.clientlogo{ float:left; width:145px; height:145px; border-radius:50%; overflow:hidden; border:4px solid #fff;}
+
+
+/* = Section8 Testimonials Section css
+-------------------------------------------------------------- */
+#clienttestiminials{box-sizing:border-box; position:relative; }
+#clienttestiminials .item{ margin:0 auto; position:relative;}
+#clienttestiminials h6{ margin:0px; font-size:18px; color:#242424; position:relative; padding-bottom:5px;}
+#clienttestiminials span{ font-size:14px; color:#717171; padding-left:15px;}
+#clienttestiminials .tmthumb{ width:65px; height:65px; float:left; margin:0 30px; overflow:hidden; border-radius:100%; }
+#clienttestiminials .tmthumb img{ width:100%; height:auto; min-height:65px; }
+#clienttestiminials .leftttl{ padding-top:25px;}
+.arrow_box{ padding:50px 40px; position:relative; background-color:#fff; border-radius:10px; margin-bottom:30px;}
+.arrow_box:after {
+	top: 100%;
+	left:11%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width:15px;
+	margin-left:-15px;
+}
+.arrow_box i{ font-size:40px; float:left; margin:0 20px 0 0; color:#e3e3e3;}
+.arrow_box p{ padding-left:60px;}
+
+
+/*testimonials listing*/
+.tmnllisting{ margin-bottom:35px; min-height:120px; background-color:#f2f2f2; padding:25px;}
+.tmnllisting .tmnlthumb{ float:left; width:120px; height:120px; margin:0 5% 0 0; overflow:hidden;}
+.tmnllisting .tmnlthumb img{ width:100%; height:100%; }
+.tmnllisting h6{ margin-bottom:5px; text-transform:uppercase; font-size:20px;}
+.tmnllisting span{ display:block; margin-bottom:15px;}
+.tmnllisting p{ margin-bottom:0;}
+
+#testimonials-widget h6{ margin-bottom:5px; text-transform:uppercase;}
+#testimonials-widget p{ margin-bottom:15px;}
+
+/*  Our Blog  */
+.blankspace{ height:60px; clear:both;}
+/* = Latesr news section css
+-------------------------------------------------------------- */
+.news-box{ width:31%; float:left; margin:0 3.2% 0 0;  position:relative;}
+.news-box.last { border-bottom:0 ; margin:0 ; padding:0 ;}
+.news-box .news-thumb{ background-color:#ff6f61; height:240px; overflow:hidden; position:relative;}
+.news-box .news-thumb img{ width:100%; height:auto; min-height:160px;}
+.news-box:hover img{ opacity:0.6;}
+.news-box p{ margin-bottom:15px;}
+.news-box h6{ margin:0 0 10px; color:#4b4a4a; font-weight:600; font-size:14px; text-transform:uppercase; line-height:20px; }
+.news-box h6 a{ color:#515151;}
+.news-box h6 a:hover{color:#dc403b; }
+.news-box .PostMeta{ font-size:13px; color:#8a8989; padding-bottom:15px; margin-bottom:10px; border-bottom:1px solid #eaeaea;}
+.news-box .PostMeta span{ margin-right:10px;}
+.news-box:last-child{  border-bottom:0 ; margin:0 ; padding:0 ;}
+.newsdesc{ padding-left:80px; position:relative; padding-top:30px;}
+
+.news-box .postdt{ font-size:13px; position:absolute; width:60px; height:60px; background-color: #ff6f61; color:#fff; top:30px; left:0;  text-align:center; border-radius:5px;}
+.news-box .postdt span{ font-size:20px; font-weight:600; display:block; padding:8px 0 0; }
+.news-box .poststyle{ font-size:13px; padding:0; text-transform:uppercase; color:#6e6d6d; font-weight:bold}
+.blogpostwrap .subtitle{ border:none; padding:0;}
+
+h2.heading{ padding-bottom:15px;}
+.underline{ border-bottom:1px solid #efeded;}
+.last{ margin-right:0 !important;}
+
+/* --------- Pages ------- */
+.content-area{ padding:30px 20px !important;}
+.site-main{ width:780px; margin:0; padding:0; float:left;}
+.sitefull{ width:100% !important;}
+#sidebar{ width:300px; float:right;}
+.sidebar-left{ float:left !important;}
+.flotRight{ float:right !important;}
+.nosidebar{ float:none !important; margin:0 auto;}
+
+/*sidebar css*/
+aside.widget{ background-color:#fff; margin-bottom:30px; padding:20px; box-shadow:0 0 10px #ddd;}
+aside.widget ul{ list-style:disc inside; }
+h3.widget-title{ font-weight:400; padding:15px; margin:-20px -20px 15px; color:#fff; font-size:22px; position:relative; background-color:#ff6f61; }
+
+#sidebar #contactform_main input[type=text], #sidebar #contactform_main input[type=email], #sidebar #contactform_main input[type=tel],#sidebar #contactform_main input[type=url], #sidebar #contactform_main textarea{width:90%; }
+#sidebar #contactform_main p{ margin-bottom:10px;}
+#sidebar ul li{ border-bottom:1px solid #ddd; list-style:none; margin-bottom:2px; padding:7px 10px 7px 0; -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+	
+#sidebar ul li:hover{padding-left:5px;}	
+#sidebar ul li a{ color:#3b3b3b; }
+#sidebar ul li a:hover{ color:#34c6f6;}
+#sidebar ul li:last-child{ border:none;}
+#sidebar .search-form input.search-field{ background-color:#fff; width:80%; padding: 11px 15px; box-sizing:border-box;}
+#sidebar .search-form input.search-submit{ background:url(images/search-icon.png) no-repeat center center #f56c6d; padding: 12px 0 12px 0; font-size:0; width:20%; height:41px; float:right;}
+
+/* = Footer css
+-------------------------------------------------------------- */
+#footer-wrapper{ background-color:#0d0f10; position:relative; color:#c1c0c0; }
+.footer{ padding:75px 0; border-bottom:1px solid #252525;}
+.footer h5{ font-size:27px; font-weight:600; margin-bottom:35px; padding-bottom:30px;  position:relative; text-transform:uppercase; }
+.footer h5::after {
+    border-bottom: 4px solid #fff;
+    bottom: 0;
+    content: "";
+    left: 0;	
+    margin: auto;
+    position: absolute;
+    width:40px;
+}
+
+.footer a.readmore span{ color:#fff;}
+.footer ul li{ list-style:inside none; margin-bottom:8px; }
+.footer ul li::before {content: "\f105"; font-family: 'Font Awesome 5 Solid'; margin-right:15px;}
+.footer ul li:last-child{ border:none;}
+.footer ul li a{ padding:3px 0 3px 0; display:inline; color:#ababab;  }
+.footer ul li a:hover, .footer ul li.current_page_item a{ color:#ef2e2e;}
+.footer ul li:last-child a{ border-bottom:none;}
+/*footer recent post*/
+ul.recent-post{ margin:0px; padding:0px; list-style:none;}
+ul.recent-post li{ display:block; margin-bottom:20px; padding-bottom:20px; min-height:55px; list-style:none; border-bottom:1px dashed #342b26;}
+ul.recent-post li::before { display:none;}
+ul.recent-post .footerthumb{ width:70px; height:70px; overflow:hidden; float:left; margin:0 15px 0 0;}
+ul.recent-post li img { width:100%; height:auto; margin-top:4px;}
+ul.recent-post li span {font-size:11px;}
+ul.recent-post li a {text-decoration:none; padding:0; border:none; display:block;}
+ul.recent-post li a:hover { text-decoration:none;}
+ul.recent-post li:last-child { border-bottom:0; padding-bottom:0; margin-bottom:0;}
+ul.recent-post li strong { margin-bottom:10px; display:block;}
+ul.recent-post li .footerdate{ color:#555; display:block; margin-top:15px; font-size:13px; }
+
+
+.footerlogo{ margin-bottom:25px;}
+.contactdetail{ line-height:22px; margin-top:25px; } 
+.contactdetail i{ margin-right:20px; font-size:16px;}
+.contactdetail p{ margin-bottom:4px;}
+.contactdetail p span{ width:70px; display:inline-block;}
+.ftrdonatebtn{ background-color:#ff6f61; color:#fff; text-transform: uppercase; font-size:15px; padding:10px 20px; display:inline-block; margin-top:25px;}
+.ftraddbox{ margin-bottom:20px;}
+
+/*Footer Manageable css*/
+.cols-1 .widget-column-1{ width:100%; float:none; text-align:center;}
+.cols-1 .widget-column-1 ul li{ display:inline-block; border:none;}
+.cols-1 .widget-column-1 ul li::before { display:none;}
+.cols-1 .widget-column-1 ul li a{ padding:0 15px; height:12px; line-height:10px; display:block; border-right:1px solid}
+.cols-1 .widget-column-1 ul li:last-child a{border:none;}
+
+.cols-2 .widget-column-1{width:45%; float:left; margin:0 10% 0% 0; box-sizing:border-box; }
+.cols-2 .widget-column-2{width:45%; float:left; margin-right:0px; box-sizing:border-box;}
+
+.cols-3 .widget-column-1{width:29%; float:left; margin:0 6% 0 0; box-sizing:border-box; }
+.cols-3 .widget-column-2{width:29%; float:left; margin:0 6% 0 0; box-sizing:border-box;}
+.cols-3 .widget-column-3{width:29%; float:left; margin-right:0px; box-sizing:border-box;}
+
+/* footer 4 column css*/
+.cols-4 .widget-column-1{ width:24%;  float:left; margin:0 4% 0 0; box-sizing:border-box; }
+.cols-4 .widget-column-2{ width:16%;  float:left; margin:0 4% 0 0; box-sizing:border-box;}
+.cols-4 .widget-column-3{ width:24%;  float:left; margin:0 4% 0 0; box-sizing:border-box;}
+.cols-4 .widget-column-4{ width:24%;  float:left; margin-right:0; box-sizing:border-box;}
+
+.copyright-wrapper { color:#fff; position:relative; padding:25px 0;}
+.copyright-txt{float:left;}
+.design-by{float:right;}
+
+.footer .social-icons{ margin-top:30px;}
+.footer .social-icons a{ background-color:#212121; color:#727171; width:40px; height:40px; line-height:40px; margin:0 0 3px 0; padding:0; color:#c1c0c0; }
+.footer .social-icons a:hover{ color:#ef2e2e; }
+
+.footer .holderwrap{height:85px;}
+.footer .holderwrap img{min-height:85px;}
+.footer .holderwrap:hover h5, .holderwrap h5:after{display:none}
+.footer figure.effect-bubba figcaption::before{ display:none;}
+
+/* = Contact Form css
+-------------------------------------------------------------- */
+.page-template-template-contact .contact_left{ background-color:#f1f1f1; padding:50px; border-radius:5px;}
+
+.wpcf7{ margin:0; padding:0; }
+.wpcf7 form{ margin:0; padding:0;}
+.wpcf7 form span.last{ float:none !important;}
+.wpcf7 form input[type="url"], .wpcf7 form input[type="date"], .wpcf7 form select{ background-color:#f1f1f1; border:1px solid #eed2bb; padding:5px 3px; margin-top:10px; font:13px arial; color:#777777;}
+.wpcf7 form input[type="checkbox"], .wpcf7 form input[type="radio"], .wpcf7 form input[type="file"]{ margin-top:10px; padding:0;}
+span.wpcf7-list-item{ margin:0 15px 0 0 !important;}
+.wpcf7 form input[type="text"], .wpcf7 form input[type="email"], .wpcf7 form input[type="tel"], .wpcf7 form textarea{ border:1px solid #e8e8e8;padding:15px; margin:0 8px 8px 0; }
+.wpcf7 form textarea{ margin-right:0; height:130px;} 
+.wpcf7 form input[type="text"], .wpcf7 form input[type="email"], .wpcf7 form input[type="tel"], .wpcf7 form textarea{ width:100%; background-color:#fff; color:#a0a0a0; padding:10px 15px; }
+.wpcf7 form{ margin-bottom:6px;}
+
+#contactform_main{ padding-bottom:25px;}
+#contactform_main input[type=text], #contactform_main input[type=email], #contactform_main input[type=tel], #contactform_main input[type=url], #contactform_main textarea{width:100%; border:1px solid #E8E8E8; padding:15px; margin:0 0 8px 0; box-sizing:border-box;}   
+#contactform_main textarea{ width:100%; margin-right:0; height:130px;} 
+#contactform_main span.capcode{ float:left; padding:13px; padding:13px; margin:0 8px 8px 0;}  
+#contactform_main input[type=submit], .wpcf7 form input[type="submit"] { text-transform:uppercase; cursor:pointer; border-radius:5px; padding:12px 35px; font-size:16px; font-weight:bold; border:none; }
+
+
+/**/
+iframe{ width:100%;}
+.contact_left{ width:60%; float:left; }
+.contact_right{ width:35%; float:right;  background-color:#f1f1f1; padding:50px; border-radius:5px; box-sizing:border-box; }
+
+.contact_right h3{ margin-bottom:20px; font-size:24px; font-weight:600;}
+h3.post-title{ margin-bottom:0px; font-weight:400; font-size:22px; clear:both; display:block;}
+.post-title a{ color:#3d3d3d;}
+.blog-post-repeat .postmeta{ border-bottom:1px solid #e8e8e8; margin-bottom:20px; font-size:15px;}
+p.read-more a{ background-color:#ff6565; color:#fff; text-align:center; padding:5px 15px;  display:inline-block; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;}
+p.read-more a:hover { background-color:#34c6f6;}
+
+/*Blog Post Layouts CSS*/
+.blog-post-repeat{ margin-bottom:50px;}
+.blog-post-repeat .post-thumb{  margin:0 0 20px 0; }
+.blog-post-repeat .post-thumb img{ margin:10px 0 0 0; height:auto; }
+
+.sitefull .blog-post-repeat .post-thumb{ width:40%; height:250px; overflow:hidden; float:left; margin:0px 30px 0 0; }
+.sitefull .blog-post-repeat .post-thumb img{ width:100%;}
+
+/*Blog Grid Layout CSS*/
+.bloggridlayout{ position:relative; width:100% !important; float:none;}
+.bloggridlayout .blog-post-repeat{ padding:15px; width:31.2%; float:left; display:inline-block; margin:0 3% 35px 0;  vertical-align:top; box-shadow:0 0 5px #ddd;}
+.sitefull.bloggridlayout .post-thumb{ width:100%; float: none; margin:0; height:230px; overflow:hidden;}
+.sitefull.bloggridlayout .post-thumb img{ width:100%; height:auto; margin:0;}
+.bloggridlayout .blogfooter{ display:block;}
+.bloggridlayout .blog-post-repeat .postmeta{ margin-bottom:0;}
+.bloggridlayout h3.post-title a{ color:#555; font-weight:400;}
+.bloggridlayout .entry-header{ padding:20px 0;}
+
+/*default css*/
+.error_msg{padding:10px; background:#ffd3ce; color:#e00; border:1px #e00 solid; margin:15px 0;}
+.success_msg{padding:10px; background:#dcffc5; color:#070; border:1px #070 solid; margin:15px 0;}
+.spacer20{height:20px; clear:both;}
+.pagination{display:table; clear:both;}
+.pagination ul{list-style:none; margin:20px 0;}
+.pagination ul li{display:inline; float:left; margin-right:5px;}
+.pagination ul li span, .pagination ul li a{background:#303441; color:#fff; padding:5px 10px; display:inline-block;}
+.pagination ul li .current, .pagination ul li a:hover{background:#34c6f6;}
+article.tag-sticky-2{background:#f6f6f6; padding:10px;}
+
+h1.entry-title{font-weight:600; font-size:30px; text-transform:uppercase; margin-bottom:30px; position:relative; line-height:36px;}
+article p{margin:0 0 20px 0;}
+.post-date{display:inline;}
+.post-comment{display:inline;}
+.post-categories{display:inline;}
+.post-tags{display:inline;}
+form.search-form{margin-bottom:20px;}
+input.search-field, .post-password-form input[type=password]{border:1px #eee solid; padding:7px 15px;}
+input.search-submit, .post-password-form input[type=submit]{border:none; color:#ffffff; padding:7px 15px; cursor:pointer; }
+#contactform_main p{ margin-bottom:0;}
+.nav-previous{float:left; margin-top:10px; margin-bottom:10px;}
+.nav-next{float:right; margin-top:10px; margin-bottom:10px;}
+nav.post-navigation{padding:10px 0 20px;}
+.comment-list, ol.comment-list{list-style:none; margin-left:0; margin-top:20px; margin-bottom:20px;}
+.comment-list ul, ol.comment-list ul{list-style:none;}
+.comment-list li.comment{margin-top:20px;}
+.comment-list .comment-content h1, .comment-list .comment-content h2, .comment-list .comment-content h3, .comment-list .comment-content h4, .comment-list .comment-content h5, .comment-list .comment-content h6{margin-top:15px;}
+
+
+/* Buttons */
+.button{ background-color:#ff6f61; color:#fff; padding:12px 25px; display:inline-block;}
+.button:hover{background-color:#202020; border-color:#1898c2; color:#fff;}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {clip: rect(1px, 1px, 1px, 1px);position: absolute !important;	height: 1px;width: 1px;	overflow: hidden;}
+.screen-reader-text:focus {	background-color: #f1f1f1;	border-radius: 3px;	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);	clip: auto !important;	color: #21759b;	display: block;
+	font-size: 14px;font-size: 0.875rem;font-weight: bold;	height: auto;left: 5px;	line-height: normal;padding: 15px 23px 14px;text-decoration: none;	top: 5px;	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+/* woocommerce CSS
+================================================*/
+a.added_to_cart{background:#e1472f; padding:5px; display:inline-block; color:#fff; line-height:1;}
+a.added_to_cart:hover{background:#000000;}
+a.button.added:before{content:'' !important;}
+#bbpress-forums ul li{padding:0;}
+#subscription-toggle a.subscription-toggle{padding:5px 10px; display:inline-block; color:#e1472f; margin-top:4px;}
+textarea.wp-editor-area{border:1px #ccc solid;}
+.woocommerce input[type=text], .woocommerce textarea{border:1px #ccc solid; padding:4px;}
+form.woocommerce-ordering select{ padding:5px; color:#777777;}
+.woocommerce table.shop_table th, .woocommerce-page table.shop_table th{ color:#ff8a00;}
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price{ color:inherit !important; font-size:15px;}
+h1.product_title, p.price{ margin-bottom:10px;}
+.woocommerce table.shop_table th, .woocommerce-page table.shop_table th{ color:#ff6d84;}
+.woocommerce ul.products li, #payment ul.payment_methods li{ list-style:none !important; text-align:center; border-bottom:2px solid #eee; padding-bottom:25px !important;}
+.woocommerce table.shop_table th, .woocommerce table.shop_table td{ border-bottom:0px !important}
+.woocommerce ul.products li.product .price del{ display:inline-block;}
+.woocommerce ul.products li.product h3{ font-size:18px; position:relative; padding-bottom:15px; margin-bottom:10px;}
+.woocommerce ul.products li.product h3::after{
+ content:"";
+ position:absolute;
+ width:50px;
+ height:1px;
+ background-color:#555;
+ bottom:0;
+ left:0;
+ right:0;
+ margin:auto;
+}
+
+.woocommerce .quantity .qty{ padding:7px; border:1px solid #ccc;}
+.woocommerce-Price-amount.amount{font-size:14px !important;}
+.woocommerce div.product .product_title{ padding-bottom:20px !important;}
+.woocommerce div.product form.cart{ margin-top:15px !important;}
+
+
+.woocommerceright{float:left;}
+.woocommerceleft{float:right;}
+.woocommercesitefull{ width:100%;}
+.woocommerce .panel{ height:auto}
+.subtitle{ text-align:center; padding-bottom:25px;}
+
+/*post nav css*/
+.post-nav{ clear:left; margin-top:40px;}
+.prev-page, .next-page{ margin:0; padding:0;}
+.prev-page a{ float:left;}
+.next-page a{ float:right;}
+.prev-page a, .next-page a{background-color:#515151; padding:5px 10px; color:#ffffff; }
+.prev-page a:hover, .next-page a:hover{ color:#ffffff; background-color:#34c6f6;}
+.singleright { float:left; }
+.singleleft { float:right; }
+.space{ clear:both; min-height:10px;}
+.skills-wrap{ width:60%; margin:0 auto; text-align:center;}
+/*back to top css*/
+#top{ position:relative;}
+#back-top {	position: fixed; bottom: 15px; right:27px;}
+#back-top a {width:45px;display: block;	text-align: center;	text-transform: uppercase;	text-decoration: none;color: #bbb;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top span {width:45px;height:47px;	display: block;	margin-bottom: 7px;	background: url(images/up-arrow.png) no-repeat center center;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;opacity:0.5;
+}
+.sitefull .fourcol .entry{ width:24%;}
+.slider-main{ min-height:200px; overflow:hidden; position:relative; background:url(images/loading.gif) no-repeat center center #fff;}
+/*gallery image same size*/
+.holderwrap{ height:250px; overflow:hidden;}
+.holderwrap img{ min-height:250px; height:auto;}
