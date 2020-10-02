@@ -23,6 +23,54 @@
     <link rel="stylesheet" href="style/grt-youtube-popup.css">
     <link rel="stylesheet" href="style/animation-style.css">
 
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 50%;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
+
     <title>Sculpt and Skin Studio</title>
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -142,13 +190,12 @@
         type="text/css" media="all"> -->
     <script type="text/javascript" src="js/jquery/jquery.js"></script>
     <!-- <script type="text/javascript" src="js/Slider/sliderengine/jquery.js"></script> -->
+    <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
     <!-- <script type="text/javascript"
-        src="http://gracethemesdemo.com/makeup/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> -->
-    <script type="text/javascript"
-        src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/js/jquery.nivo.slider.js?ver=5.3.4"></script>
+        src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/js/jquery.nivo.slider.js?ver=5.3.4"></script> -->
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/jquery.quovolver.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <!-- <script type="text/javascript" src="js/owl.carousel.js"></script> -->
     <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/mixitup/jquery_013.js"></script>
@@ -157,6 +204,8 @@
     <script type="text/javascript" src="js/mixitup/jquery.prettyPhoto5152.js"></script>
     <script type="text/javascript" src="js/jquery.flexisel.js"></script>
     <script type="text/javascript" src="js/custom-animation.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
     <!-- <link rel="https://api.w.org/" href="http://gracethemesdemo.com/makeup/wp-json/">
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://gracethemesdemo.com/makeup/xmlrpc.php?rsd">
     <link rel="wlwmanifest" type="application/wlwmanifest+xml"
@@ -164,9 +213,16 @@
 
     <!-- Insert to your webpage before the </head> -->
     <!-- <script src="js/Slider/sliderengine/jquery.js"></script> -->
-    <script src="js/Slider/sliderengine/amazingslider.js"></script>
-    <script src="js/Slider/sliderengine/initslider-1.js"></script>
+    <!-- <script src="js/Slider/sliderengine/amazingslider.js"></script>
+    <script src="js/Slider/sliderengine/initslider-1.js"></script> -->
     <!-- End of head section HTML codes -->
+
+
+
+    <!-- Bootstrap slider -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="generator" content="WordPress 5.3.4">
 
     <script>
@@ -648,6 +704,299 @@
         .amazingslider-description-0 {
             color: #00abb2 !important;
         }
+
+        .jk-slider {
+            width: 100%;
+        }
+
+        /*          Hero Headers        */
+        /********************************/
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            -ms-transform: translate3d(-50%, -50%, 0);
+            -o-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-weight: bold;
+            margin: 0 auto;
+            padding: 0;
+            color: #00abb2;
+            max-width: 50%;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .hero p {
+            margin-bottom: 30px;
+            text-transform: capitalize;
+        }
+
+        .hero a {
+            color: #fff;
+            background-color: #00abb2;
+            padding: 20px 40px;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .carousel {
+            height: 100%;
+        }
+
+        .carousel-inner {
+            height: 100%;
+        }
+
+        .item {
+            height: 100%;
+        }
+
+        .carousel-slide-img {
+            height: 100% !important;
+        }
+
+
+
+        @media screen and (min-width: 981px) {
+            .jk-slider {
+                max-height: 90vh;
+                height: 80vh;
+            }
+
+            .hero {
+                width: 70%;
+            }
+
+            .hero h1 {
+                font-size: 70px;
+            }
+
+            .hero h3 {
+                font-size: 50px;
+                margin: 5px auto;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .hero a {
+                padding: 15px 40px;
+            }
+        }
+
+        @media screen and (max-width: 980px) and (min-width: 481px) {
+            .jk-slider {
+                max-height: 90vh;
+                height: 70vh;
+            }
+
+            .hero {
+                width: 70%;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                max-width: 100%;
+            }
+
+            .hero h3 {
+                font-size: 30px;
+                margin: 5px auto;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero a {
+                display: none;
+                padding: 5px 30px;
+            }
+        }
+
+        @media screen and (max-width: 480px) and (min-width: 301px) {
+            .jk-slider {
+                max-height: 90vh;
+                height: 60vh;
+            }
+
+            .hero {
+                width: 70%;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                max-width: 100%;
+            }
+
+            .hero h3 {
+                font-size: 27x;
+                margin: 5px auto;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero a {
+                display: none;
+                padding: 8px 20px;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+
+            .one_img_column,
+            .videobox {
+                width: auto !important;
+                height: auto !important;
+            }
+
+            .jk-slider {
+                max-height: 90vh;
+                height: 50vh;
+            }
+
+            .hero {
+                width: 70%;
+            }
+
+            .banner_videobox .img-bg {
+                height: 380px !important;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+                max-width: 100%;
+            }
+
+            .hero h3 {
+                font-size: 22px;
+                margin: 5px auto;
+            }
+
+            .hero p {
+                font-size: 12px;
+            }
+
+            .hero a {
+                display: none;
+                padding: 10px 20px;
+            }
+        }
+
+
+        @media screen and (max-width: 767) and (min-width: 481) {
+            .video-title-desc p {
+                display: block !important;
+                font-size: 12px;
+            }
+        }
+
+        .fade-carousel .carousel-inner .item .hero {
+            opacity: 0;
+            -webkit-transition: 2s all ease-in-out .1s;
+            -moz-transition: 2s all ease-in-out .1s;
+            -ms-transition: 2s all ease-in-out .1s;
+            -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+        }
+
+        .fade-carousel .carousel-inner .item.active .hero {
+            opacity: 1;
+            -webkit-transition: 2s all ease-in-out .1s;
+            -moz-transition: 2s all ease-in-out .1s;
+            -ms-transition: 2s all ease-in-out .1s;
+            -o-transition: 2s all ease-in-out .1s;
+            transition: 2s all ease-in-out .1s;
+        }
+
+        /********************************/
+        /*            Overlay           */
+        /********************************/
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-color: #080d15b9;
+            opacity: .7;
+        }
+
+        .email-wrapper {
+            display: flex;
+            position: relative;
+            padding: 15px 20px;
+            margin-top: 20px !important;
+            width: 90%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 100px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .email-wrapper {
+                width: 90%;
+            }
+
+            .email-submit {
+                width: 90px !important;
+            }
+        }
+
+        .email-input {
+            position: relative;
+            width: 75%;
+        }
+
+        .email-input input {
+            /* position: absolute; */
+            /* left: 0; */
+            width: 95%;
+            margin-left: 0;
+            border: none;
+            outline: none;
+        }
+
+        .email-submit {
+            position: absolute;
+            height: 100%;
+            width: 220px;
+            top: 0;
+            right: 0;
+            margin: 0 auto;
+            background: #00abb2;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            /* margin-right: 0; */
+        }
+
+        .email-submit input {
+            background: transparent;
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
 
@@ -709,7 +1058,7 @@
             </div><!-- .container-->
             <div class="clear"></div>
         </div><!-- .header -->
-
+        <!-- 
         <div id="amazingslider-1" style="display:block;position:relative;margin:0px auto 0px;">
             <ul class="amazingslider-slides" style="display:none;">
                 <li><img src="images/websiteresources/banner 2-01.jpg" alt="Special hair Style"
@@ -719,12 +1068,87 @@
                 <li><img src="images/websiteresources/pexels-andrea-piacquadio-3757942 (1).jpg"
                         alt="Feel More Beautiful" data-description="Lorem ipsum dolor sit amet sedeiusmod dolore" />
                 </li>
-                <!-- <li><img src="images/websiteresources/s4.jpg" alt="Get Any Help Contact :Me"
-                        data-description="Hello I  am here to do all your needs" /></li> -->
+                <li><img src="images/websiteresources/s4.jpg" alt="Get Any Help Contact :Me"
+                        data-description="Hello I  am here to do all your needs" /></li>
             </ul>
             <div class="amazingslider-engine" style="display:none;"><a href="http://amazingslider.com"
                     title="jQuery Image Slideshow">jQuery Image Slideshow</a></div>
-        </div>
+        </div> -->
+
+        <section class="jk-slider" style="padding: 0;">
+            <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <div class="hero">
+                            <hgroup>
+                                <h1 style="color: #00abb2;">Experience</h1>
+                                <h3>the real Essence Of Spa! </h3>
+                                <p>Our team of highly trained professionals dedicated to enhancing the way patients look
+                                    and feel.
+                                </p>
+                                <a>Our Services</a>
+                            </hgroup>
+
+                        </div>
+                        <div class="overlay"></div>
+                        <a href="#"><img class="carousel-slide-img" style="width: 100%; "
+                                src="images/websiteresources/banner 2-01.jpg" /></a>
+
+                    </div>
+                    <div class="item">
+                        <div class="hero">
+                            <hgroup>
+                                <h1>RELAX, REJUVENATE, REFRESH</h1>
+                                <!-- <h3>the books you need and save ! </h3> -->
+                                <p>The Skin&amp; Sculpt Spa provides a beautiful, relaxing retreat where you can come
+                                    and let our spa
+                                    professionals take care of you.
+                                </p>
+                            </hgroup>
+
+                        </div>
+
+                        <div class="overlay"></div>
+                        <a href="#"><img style="width: 100%;" class="carousel-slide-img"
+                                src="images/websiteresources/pexels-andrea-piacquadio-3757651 (1).jpg" /></a>
+
+                    </div>
+                    <div class="item">
+                        <div class="hero">
+                            <hgroup>
+                                <h1>There's a younger you inside</h1>
+                                <p>The comfort of a spa. The care of a clinician. The latest non-surgical anti-aging
+                                    services and
+                                    products.
+                                </p>
+                            </hgroup>
+
+                        </div>
+                        <div class="overlay"></div>
+                        <a href="#"><img style="width: 100%;" class="carousel-slide-img"
+                                src="images/websiteresources/pexels-andrea-piacquadio-3757942 (1).jpg" /></a>
+
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+
+        </section>
+
+
         <!-- <div class="slider-main">
             <div id="slider" class="nivoSlider">
                 <img src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/slides/slider1.jpg"
@@ -881,38 +1305,38 @@
                 <div class="pagebox_left ">
                     <div class="threebox ">
                         <div class="thumbbx">
-                            <a class="hvr-grow" href="#"><img src="images/websiteresources/Face.png" alt=""></a>
+                            <a class="hvr-grow" href="#"><img src="images/websiteresources/body.png" alt=""></a>
                         </div>
 
                         <div class="pagecontent">
                             <a href="#">
-                                <h3>Face Message</h3>
+                                <h3>Body Message</h3>
                             </a>
-                            <p>Aenean sit amet lsonsectetur hendrerit. Sed faci sedrutrum In finibus ex nec.</p>
+                            <p>Soothe, hydrate, and reveal glowing skin with our specially formulated body services</p>
                         </div>
                     </div>
                     <div class="threebox last_column">
                         <div class="thumbbx">
-                            <a class="hvr-grow" href="#"><img src="images/websiteresources/Infra.png" alt=""></a>
+                            <a class="hvr-grow" href="#"><img src="images/websiteresources/Skin.png" alt=""></a>
                         </div>
 
                         <div class="pagecontent">
                             <a href="#">
-                                <h3>Infra</h3>
+                                <h3>Skin Tight</h3>
                             </a>
-                            <p>Aenean sit amet lsonsectetur hendrerit. Sed faci sedrutrum In finibus ex nec.</p>
+                            <p>Treatment For Loose Facial Skin and Vascular Treatment</p>
                         </div>
                     </div>
                     <div class="threebox ">
                         <div class="thumbbx">
-                            <a class="hvr-grow" href="#"><img src="images/websiteresources/Cellulite.png" alt=""></a>
+                            <a class="hvr-grow" href="#"><img src="images/websiteresources/Spa.png" alt=""></a>
                         </div>
 
                         <div class="pagecontent">
                             <a href="#">
-                                <h3>Cellulite</h3>
+                                <h3>Spa</h3>
                             </a>
-                            <p>Aenean sit amet lsonsectetur hendrerit. Sed faci sedrutrum In finibus ex nec.</p>
+                            <p>Relax with our Spa Packages while you contemplate mother nature at its best!</p>
                         </div>
                     </div>
                     <div class="threebox last_column">
@@ -922,21 +1346,10 @@
 
                         <div class="pagecontent">
                             <a href="#">
-                                <h3>Bumm</h3>
+                                <h3>Sculpting:</h3>
                             </a>
-                            <p>Aenean sit amet lsonsectetur hendrerit. Sed faci sedrutrum In finibus ex nec.</p>
-                        </div>
-                    </div>
-                    <div class="threebox ">
-                        <div class="thumbbx">
-                            <a class="hvr-grow" href="#"><img src="images/websiteresources/lipo.png" alt=""></a>
-                        </div>
-
-                        <div class="pagecontent">
-                            <a href="#">
-                                <h3>Lipo</h3>
-                            </a>
-                            <p>Aenean sit amet lsonsectetur hendrerit. Sed faci sedrutrum In finibus ex nec.</p>
+                            <p>Reduces excess fat, reduces cellulite, and smooths bumps and bulges and Shapes and tones
+                                skin</p>
                         </div>
                     </div>
 
@@ -948,13 +1361,16 @@
                 <div class="pagebox_right ">
 
                     <div class="welcome_contentcolumn">
-                        <h3>Welcome to <span>Beauty Salon</span></h3>
-                        <p>Donec in metus lectus. Integer vulputate porta elit, fringilla mollis mag luctus vellting
-                            Interdum et malesuada fames ac ante ipsum primis in fauci. Pellentesque in aliquam enim,
-                            quis lobortis arcu. Curabitur quis ultrices est. Donec dapibus felis vel venenatis
-                            consequat. Sed feugiat diam consequat velit un fermentum turpis cursus ante ipsum primis in
-                            fauci ras semper, neque vitae hendrerit venenatis, tortor erat faucibus justo, sed faucibus
-                            orci felis vitae risus aliquam enim, quis lobortis arcu.</p>
+                        <h3>Welcome to <span>Sculpt Skin Studio</span></h3>
+                        <p>Your Body, But Better!” We have helped thousands of people to achieve their medical
+                            aesthetics and
+                            cosmetic surgery goals. We provides a pain-free, non-invasive treatment that uses advanced
+                            radio
+                            frequency technology to comfortably heat the deeper layer of your skin, which increases
+                            collagen
+                            production. This effectively reduces fine lines and deep wrinkles, firms sagging skin, and
+                            restores a more
+                            youthful, refreshed appearance.</p>
 
                         <a class="buttonstyle1" href>Read More</a>
 
@@ -970,23 +1386,24 @@
 
 
         <section style="background-color:#dddddd; " id="section1" class="menu_page">
-            <div class="container">
+            <div class="container" style="padding: 0;">
                 <div class="">
 
                     <div class="banner_videobox">
-                        <img width="100%"
-                            src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/video-banner-large.jpg"
-                            alt="">
+                        <img class="img-bg" width="100%" src="images/websiteresources/know.jpg" alt="">
                         <div class="video-title-desc">
-                            <h4>Know Us</h4>
-                            <h2>Our Hair Clinic Story</h2>
-                            <p>Donec in metus lectus. Integer vulputate porta elit, fringilla mollis mag luctus vellting
-                                Interdum et malesuada fames ac ante ipsum primis in fauci. Pellentesque in aliquam enim,
-                                quis lobortis arcu. Curabitur quis ultrices est. Donec dapibus felis vel venenatis
-                                consequat. Sed feugiat dionsequat velit un fermentum turpis cursus ante ipsum primis in
-                                fauci ras semper, neque</p>
-                            <a href="" class="youtube-link" youtubeid="Mv9uCwKt8-E"><i
-                                    class="fas fa-caret-right"></i></a>
+                            <h4>Why Choose</h4>
+                            <h2>Sculpt Skin Studio</h2>
+                            <p>At The Sculpt &amp; Skin Studio, you can experience a relaxing and nurturing skin care
+                                treatment. We know
+                                the importance of healthy skin and want to help you achieve it. Our mission and success
+                                has been
+                                proven by our client loyalty, business growth and client satisfaction. We deliver life
+                                enhancing results for
+                                the body, mind and spirit, in a friendly, relaxed, supportive and professional
+                                environment.</p>
+                            <!-- <a href="" class="youtube-link" youtubeid="Mv9uCwKt8-E"><i
+                                    class="fas fa-caret-right"></i></a> -->
                         </div>
                     </div>
                 </div><!-- .end section class -->
@@ -998,53 +1415,57 @@
                 <div class="">
                     <p></p>
                     <div class="about_leftbox">
-                        <div class="sec_content_main_title" style="text-align:left;">About Makeup</div>
-                        <div class="subtitle" style="font-size:22px; color:#000000; text-align:left;">Lorem ipsum dolor
+                        <div class="sec_content_main_title" style="text-align:left;">About Spa</div>
+                        <!-- <div class="subtitle" style="font-size:22px; color:#000000; text-align:left;">Lorem ipsum dolor
                             sit amet, consectetur adipiscing elit, sedeiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.</div>
+                            magna aliqua.</div> -->
                         <p></p>
-                        <p>Donec in metus lectus. Integer vulputate porta elit, fringilla mollis mag luctus vellting
-                            Interdum et malesuada fames ac ante ipsum primis in fauci. Pellentesque in aliquam enim,
-                            quis lobortis arcu. Curabitur quis ultrices est. Donec dapibus felis vel venenatis
-                            consequat. Sed feugiat diam consequat velit un fermentum turpis cursus ante ipsum primis in
-                            fauci ras semper, neque vitae hendrerit venenatis, tortor erat faucibus justo, sed faucibus
-                            orci felis.<br>
+                        <p>At The Skin &amp; Body Spa, we know the importance of healthy skin &amp; body and how hard it
+                            can be to
+                            achieve that health. We use the best products and treatments to help transform your body
+                            &amp; skin.
+                            Through every stage of your life - from puberty to pregnancy to adult, menopause and beyond
+                            - you
+                            have certain health care needs that call for attentive, expert, and compassionate care. Our
+                            experienced
+                            and dedicated staff will listen to your concerns and help you to maintain optimal health and
+                            overall
+                            wellness. Our team is knowledgeable and can help you determine they type of skin you have
+                            and the
+                            best treatment options for you. Learn more about our estheticians and how we can help
+                            you.<br>
                         </p>
                         <div class="space" style="height:40px"></div><br>
                         <div class="counterlist ">
-                            <div class="countricon"><img alt=""
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/counter-icon1.png">
+                            <div class="countricon"><img alt="" src="images/websiteresources/2 w 1 copy.png">
                             </div>
-                            <h6>Beauty Styles </h6>
-                            <div class="counter">160</div>
+                            <h6>Customer </h6>
+                            <div class="counter">500+</div>
                         </div>
                         <div class="counterlist last">
-                            <div class="countricon"><img alt=""
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/counter-icon2.png">
+                            <div class="countricon"><img alt="" src="images/websiteresources/2 w2.jpg">
                             </div>
-                            <h6>Natural Treatments </h6>
-                            <div class="counter">115</div>
+                            <h6>Treatments </h6>
+                            <div class="counter">10+</div>
                         </div>
                     </div>
-                    <div class="about_rightbox"><img
-                            src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/about_img.jpg"
-                            alt=""></div>
+                    <div class="about_rightbox"><img src="images/websiteresources/About.jpg" alt=""></div>
                     <p></p>
                 </div><!-- .end section class -->
                 <div class="clear"></div>
             </div><!-- container -->
         </section>
-        <section style="background-color:#efefef; " id="section3" class="menu_page">
-            <div class="container">
+        <section style="background-color:#efefef;  display: none;" id="section3" class="menu_page">
+            <div class="container" style="padding: 0;">
                 <div class="">
                     <div class="fashion_rotator owl-carousel owl-theme owl-loaded">
                         <div class="owl-stage-outer">
                             <div class="owl-stage"
                                 style="transform: translate3d(-1519px, 0px, 0px); transition: all 0s ease 0s; width: 4557px;">
-                                <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
+                                <!-- <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model01.jpg"
+                                                    src="images/websiteresources/S1.jpg"
                                                     alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
@@ -1096,29 +1517,14 @@
                                             <a class="fashionmore" href="#">Read More</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="owl-item active" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model01.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/S1.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Hair Styling</h3>
-                                                <h6>Services</h6>
-                                            </div>
-                                            <a class="fashionmore" href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active" style="width: 379.75px; margin-right: 0px;">
-                                    <div class="fashiontrendwrap">
-                                        <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model02.jpg"
-                                                    alt=""></a></div>
-                                        <div class="fashion_contentbx">
-                                            <div class="titlearea">
-                                                <h3>Make-Up</h3>
+                                                <h3>Body Contouring</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1128,11 +1534,10 @@
                                 <div class="owl-item active" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model03.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/s2.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Cosmetology</h3>
+                                                <h3>Celulite Reduction</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1142,11 +1547,23 @@
                                 <div class="owl-item active" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model04.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/s3.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Nail Polish</h3>
+                                                <h3>Butt Lift</h3>
+                                                <h6>Services</h6>
+                                            </div>
+                                            <a class="fashionmore" href="#">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item active" style="width: 379.75px; margin-right: 0px;">
+                                    <div class="fashiontrendwrap">
+                                        <div class="fashion_imgbx"><a href="#" target="_blank"><img
+                                                    src="images/websiteresources/s4.jpg" alt=""></a></div>
+                                        <div class="fashion_contentbx">
+                                            <div class="titlearea">
+                                                <h3>Face & Neck Lift</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1156,11 +1573,10 @@
                                 <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model01.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/S1.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Hair Styling</h3>
+                                                <h3>Body Contouring</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1170,11 +1586,10 @@
                                 <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model02.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/s2.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Make-Up</h3>
+                                                <h3>Celulite Reduction</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1184,11 +1599,10 @@
                                 <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model03.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/s3.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Cosmetology</h3>
+                                                <h3>Butt Lift</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1198,11 +1612,10 @@
                                 <div class="owl-item cloned" style="width: 379.75px; margin-right: 0px;">
                                     <div class="fashiontrendwrap">
                                         <div class="fashion_imgbx"><a href="#" target="_blank"><img
-                                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/model04.jpg"
-                                                    alt=""></a></div>
+                                                    src="images/websiteresources/s4.jpg" alt=""></a></div>
                                         <div class="fashion_contentbx">
                                             <div class="titlearea">
-                                                <h3>Nail Polish</h3>
+                                                <h3>Face & Neck Lift</h3>
                                                 <h6>Services</h6>
                                             </div>
                                             <a class="fashionmore" href="#">Read More</a>
@@ -1223,7 +1636,7 @@
                 <div class="clear"></div>
             </div><!-- container -->
         </section>
-        <section style="background-color:#ffffff; " id="section4" class="menu_page">
+        <section style="background-color:#e6fbff;" id="section4" class="menu_page">
             <div class="container">
                 <div class="">
                     <h2 class="section_title">Our Services</h2>
@@ -1234,37 +1647,28 @@
                         quis ultrices est.</div><br>
                     <div class="one_third">
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon1.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/Post op.png" alt=""></div>
                             <div class="description">
-                                <h4>Shaving</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at rquis fringnull
-                                    lobortis.</p>
+                                <h4>Post-Operative Lymphatic Drainage Treatment</h4>
+                                <p>It helps promote tissue regeneration &amp; reduce the severity of scars.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
 
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon2.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/Ultra.png" alt=""></div>
                             <div class="description">
-                                <h4>Trimming Mustache</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at rquis fringnull
-                                    lobortis.</p>
+                                <h4>Ultrasound Cavitation</h4>
+                                <p>This gave patient better-proportioned appearances with smoother contours.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
 
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon3.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/laser lipo.png" alt=""></div>
                             <div class="description">
-                                <h4>Trimming Beard</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at rquis fringnull
-                                    lobortis.</p>
+                                <h4>Laser Lipo Body Sculpting</h4>
+                                <p>It is the latest noninvasive technological breakthrough in fat reductions.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -1274,37 +1678,32 @@
                     </div>
                     <div class="one_third last_column">
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon4.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/body face neck.png" alt=""></div>
                             <div class="description">
-                                <h4>Haircut</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at rquis fringnull
-                                    lobortis.</p>
+                                <h4>Endymed 3Deep Body Face/Neck Tightening</h4>
+                                <p>It is designed to deliver clinically proven effective treatments across wide range of
+                                    areas.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
 
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon5.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/Bumm (1).png" alt=""></div>
                             <div class="description">
-                                <h4>Hair Color</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at rquis fringnull
-                                    lobortis.</p>
+                                <h4>Non invasive Brazilian Butt Lift</h4>
+                                <p>It uses Vacuum therapy, 3D lipo and or radio frequency to build collagen mobilize fat
+                                    cells to desired
+                                    area while gradually lifting the buttocks.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
 
                         <div class="best-featurs">
-                            <div class="thumb"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/services_icon6.png"
-                                    alt=""></div>
+                            <div class="thumb"><img src="images/websiteresources/cellulite (1).png" alt=""></div>
                             <div class="description">
-                                <h4>Hair Styling</h4>
-                                <p>Cras metus quam, condimentum ut venen rutrum ediam. Sed vehicula at r quis fringnull
-                                    lobortis.</p>
+                                <h4>Cellulite Reduction</h4>
+                                <p>It is the combination of vacuum, radio and wood therapy to help break apart dimples
+                                    caused by cellulite.</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -1321,37 +1720,33 @@
                     <p></p>
                     <div class="one_half">
                         <div class="double-imagebox">
-                            <div class="first_imgbx"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/first_img.jpg"
-                                    alt=""></div>
-                            <div class="second_imgbx"><img
-                                    src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/second_img.jpg"
-                                    alt=""></div>
+                            <div class="first_imgbx"><img src="images/websiteresources/Rate 1.jpg" alt=""></div>
+                            <div class="second_imgbx"><img src="images/websiteresources/rate 2.jpg" alt=""></div>
                         </div>
                     </div>
                     <div class="one_half last_column">
                         <div class="our_rates">
-                            <h4>Machine Haircut <span>$39</span> </h4>
+                            <h4>Cellulite Reduction <span>$39</span> </h4>
                             <p>Aenean sit amet lsonsectetur hendredru In finibus exnec</p>
                         </div>
                         <div class="our_rates">
-                            <h4>Gel Shaving <span>$36</span> </h4>
+                            <h4>Non invasive Brazilian Butt Lift<span>$36</span> </h4>
                             <p>Finibus sit amet lsonsectetur hendredru In exnec</p>
                         </div>
                         <div class="our_rates">
-                            <h4>Beard Triming <span>$37</span> </h4>
+                            <h4>Endymed 3Deep Body Face/Neck Tightening<span>$37</span> </h4>
                             <p>Finibus sit amet lsonsectetur hendredru In exnec</p>
                         </div>
                         <div class="our_rates">
-                            <h4>Facial Massage <span>$33</span> </h4>
+                            <h4>Laser Lipo Body Sculpting <span>$33</span> </h4>
                             <p>Aenean sit amet lsonsectetur hendredru In finibus exnec</p>
                         </div>
                         <div class="our_rates">
-                            <h4>Head Massage <span>$42</span> </h4>
+                            <h4>Ultrasound Cavitation <span>$42</span> </h4>
                             <p>Aenean sit amet lsonsectetur hendredru In finibus exnec</p>
                         </div>
                         <div class="our_rates">
-                            <h4>Hair Trimming <span>$45</span> </h4>
+                            <h4>Wood Therapy<span>$45</span> </h4>
                             <p>Amet lsonsectetur hendredru In finibus exnec</p>
                         </div>
                     </div>
@@ -1365,12 +1760,16 @@
                 <div class="">
                     <div class="why_choose_left">
                         <div class="sec_content_main_title" style="text-align:left;">Why Our Clients Choose Us</div>
-                        <div class="subtitle" style="font-size:16px; color:#000000; text-align:left;">Donec in metus
-                            lectus. Integer vulputate porta elit, fringilla mollis mag luctus vellting Interdum et
-                            malesuada fames ac ante ipsum primis in fauci.</div>
+                        <div class="subtitle" style="font-size:16px; font-weight: 400; color:#000000; text-align:left;">
+                            Dedicated to the craft of beauty in all aspects, Compliments Salon & Boutique provides a
+                            unique guest experience that immediately makes you feel welcome, confident, and comfortable.
+                            We all deserve to look and feel our best, so together lets achieve your beauty goals. It is
+                            our mission to listen to what is important to you, design a unique style around your face
+                            shape and body, and then make sure you know how to recreate your very own style with the
+                            correct products and styling techniques. </div>
                         <p></p>
                         <p></p>
-                        <ul class="list-1">
+                        <!-- <ul class="list-1">
                             <p></p>
                             <ul>
                                 <li>Fully focused on accessibility</li>
@@ -1381,7 +1780,7 @@
                             </ul>
                             <p>
                             </p>
-                        </ul>
+                        </ul> -->
                         <div class="custombtn" style="text-align:left">
                             <a class="morebutton" href="#" target""="">Read More →</a>
                         </div><br>
@@ -1409,9 +1808,7 @@
             <div class="container">
                 <div class="">
                     <p></p>
-                    <div class="discount_left"><img
-                            src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/discounts-banner.png"
-                            alt=""></div>
+                    <div class="discount_left"><img src="images/websiteresources/disc.png" alt=""></div>
                     <div class="discount_right">
                         <div class="sec_content_sub_title" style="text-align:left; font-size:32px; color:#ffffff">Get
                             Huge Discounts Now</div>
@@ -1433,24 +1830,24 @@
                     <p></p>
                     <div class="static_product_list ">
                         <div class="prouctbgimg"
-                            style="background-image:url(http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/product01.jpg); background-repeat:no-repeat;">
+                            style="background-image:url(images/websiteresources/designer.jpg); transform: rotate(180deg); background-repeat:no-repeat;">
                         </div>
                         <div class="static_product_contentbx">
-                            <span>Designer</span>
+                            <span>SPA</span>
                             <h3>Products</h3>
                             <p>Donec in metus lectnt vulputate porta elit, fringilla mollis mag.</p>
-                            <a class="shopnow" href="#">SHOP NOW</a>
+                            <a class="shopnow" href="#">Book Appointment</a>
                         </div>
                     </div>
                     <div class="static_product_list last">
                         <div class="prouctbgimg"
-                            style="background-image:url(http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/product02.jpg); background-repeat:no-repeat;">
+                            style="background-image:url(images/websiteresources/designer2.jpg); background-repeat:no-repeat;">
                         </div>
                         <div class="static_product_contentbx">
-                            <span>Styling</span>
+                            <span>SPA</span>
                             <h3>Accessories</h3>
                             <p>Donec in metus lectnt vulputate porta elit, fringilla mollis mag.</p>
-                            <a class="shopnow" href="#">SHOP NOW</a>
+                            <a class="shopnow" href="#">Book Appointment</a>
                         </div>
                     </div>
                     <p></p>
@@ -1463,13 +1860,25 @@
             id="section9" class="menu_page">
             <div class="container">
                 <div class="">
-                    <h2 class="section_title">Our Stylers</h2>
+                    <h2 class="section_title">Feel Free to Contact Us Anytime!</h2>
                     <p></p>
                     <div class="subtitle" style="font-size:16px; color:#fff; text-align:center;">Donec in metus lectus.
                         Integer vulputate porta elit, fringilla mollis mag luctus vellting Interdum et malesuada fames
                         ac ante ipsum primis in fauci. Pellentesque in aliquam enim, quis lobortis arcu. Curabitur quis
-                        ultrices est.</div>
-                    <div id="team_members">
+                        ultrices est.
+
+                        <div class="email-wrapper">
+                            <div class="email-input">
+                                <input type="email" name="email" placeholder="Enter Your Email  " />
+                            </div>
+                            <div class="email-submit">
+                                <input type="submit" Value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="team_members" style="display: none;">
                         <div class="teammember-list">
                             <div class="thumnailbx"><a class="hvr-grow"
                                     href="http://gracethemesdemo.com/makeup/our-team/linda-merry/"><img width="270"
@@ -1548,11 +1957,9 @@
         <section style="background-color:#007377; " id="section10" class="menu_page">
             <div class="container">
                 <div class="">
-                    <div class="trending_left"><img
-                            src="http://gracethemesdemo.com/makeup/wp-content/themes/makeup-pro/images/trending_image.jpg"
-                            alt=""></div>
+                    <div class="trending_left"><img src="images/websiteresources/Last ft.jpg" alt=""></div>
                     <div class="trending_right">
-                        <div class="sec_content_main_title" style="text-align:left;">Trending Style</div>
+                        <div class="sec_content_main_title" style="text-align:left;">Before and After</div>
                         <div class="subtitle" style="font-size:16px; color:#ffffff; text-align:left;">Donec in metus
                             lectus. Integer vulputate porta elit, fringilla mollis mag luctus vellting Interdum
                             malesuada fames ac ante ipsum primis in fauci. Pellentesque in aliquam enim, quis lobortis
@@ -1561,7 +1968,7 @@
                         <p></p>
                         <div class="trending_wrapper owl-carousel owl-theme owl-loaded">
 
-
+                            <!-- 
 
                             <div class="owl-stage-outer">
                                 <div class="owl-stage"
@@ -1569,8 +1976,7 @@
                                     <div class="owl-item cloned" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model01.jpg"
+                                                <div class="client-img"><img src="images/websiteresources/01.jpg"
                                                         alt=""></div>
                                             </a>
                                             <h6></h6>
@@ -1579,8 +1985,7 @@
                                     <div class="owl-item cloned" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model02.jpg"
+                                                <div class="client-img"><img src="images/websiteresources/11.1.jpg"
                                                         alt=""></div>
                                             </a>
                                             <h6></h6>
@@ -1589,8 +1994,7 @@
                                     <div class="owl-item cloned" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model03.jpg"
+                                                <div class="client-img"><img src="images/websiteresources/mbc_02.jpg"
                                                         alt=""></div>
                                             </a>
                                             <h6></h6>
@@ -1599,8 +2003,7 @@
                                     <div class="owl-item cloned" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model04.jpg"
+                                                <div class="client-img"><img src="images/websiteresources/mbc_105.jpg"
                                                         alt=""></div>
                                             </a>
                                             <h6></h6>
@@ -1608,10 +2011,11 @@
                                     </div>
                                     <div class="owl-item active" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
-                                            <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model01.jpg"
-                                                        alt=""></div>
+                                            <a href="images/websiteresources/mbc_99.jpg">
+                                                <div class="client-img"
+                                                    style="background-image: url(images/websiteresources/mbc_99.jpg);">
+                                                    <!<img src="images/websiteresources/mbc_99.jpg" alt=""> >
+                                                </div>
                                             </a>
                                             <h6></h6>
                                         </div>
@@ -1619,9 +2023,21 @@
                                     <div class="owl-item active" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model02.jpg"
-                                                        alt=""></div>
+                                                <div class="client-img"
+                                                    style="background-image: url(images/websiteresources/01\ \(1\).jpg)">
+
+                                                </div>
+                                            </a>
+                                            <h6></h6>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 171px; margin-right: 30px;">
+                                        <div class="clientlogo">
+                                            <a href="images/websiteresources/01 (1).jpg">
+                                                <div class="client-img"
+                                                    style="background-image: url(images/websiteresources/mbc_99.jpg);">
+                                                    <!<img src="images/model03.jpg" alt=""> >
+                                                </div>
                                             </a>
                                             <h6></h6>
                                         </div>
@@ -1629,19 +2045,10 @@
                                     <div class="owl-item active" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model03.jpg"
-                                                        alt=""></div>
-                                            </a>
-                                            <h6></h6>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item active" style="width: 171px; margin-right: 30px;">
-                                        <div class="clientlogo">
-                                            <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model04.jpg"
-                                                        alt=""></div>
+                                                <div class="client-img"
+                                                    style="background-image: url(images/websiteresources/11.1.jpg);">
+                                                    <! <img src="images/model04.jpg" alt=""> ->
+                                                </div>
                                             </a>
                                             <h6></h6>
                                         </div>
@@ -1649,9 +2056,7 @@
                                     <div class="owl-item cloned" style="width: 171px; margin-right: 30px;">
                                         <div class="clientlogo">
                                             <a href="#">
-                                                <div class="client-img"><img
-                                                        src="images/model01.jpg"
-                                                        alt=""></div>
+                                                <div class="client-img"><img src="images/model01.jpg" alt=""></div>
                                             </a>
                                             <h6></h6>
                                         </div>
@@ -1688,6 +2093,8 @@
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="owl-controls">
                                 <div class="owl-nav">
                                     <div class="owl-prev" style="">prev</div>
@@ -1695,83 +2102,120 @@
                                 </div>
                                 <div class="owl-dots" style="display: none;"></div>
                             </div>
-                        </div><br>
-                    </div>
-                </div><!-- .end section class -->
-                <div class="clear"></div>
-            </div><!-- container -->
-        </section>
-
-        <div id="footer-wrapper">
-            <div class="container footer">
-
-                <!-- =============================== Column One - 1 =================================== -->
-
-                <!-- =============================== Column Fourth - 4 =================================== -->
-
-                <div class="cols-4">
-
-                    <div class="widget-column-1">
-                        <h5>About Us</h5>
-                        <p>Aenean sit amet leo scel consectetur hendrerit. Sed facilisis at sedrutrum. In finibus ex nec
-                            odio egestas, veauct urna varius. Aenean tempor varius.</p>
-                        <div class="social-icons">
-                            <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                            <a href="#" target="_blank" class="fab fa-twitter"></a>
-                            <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
-                            <a href="#" target="_blank" class="fab fa-google-plus-g"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="widget-column-2">
-                        <h5>Useful Links</h5>
-                        <div class="menu-footer-menu-container">
-                            <ul id="menu-footer-menu" class="menu">
-                                <li id="menu-item-8"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-8">
-                                    <a title="												" href="http://gracethemesdemo.com/makeup/"
-                                        aria-current="page">Home</a></li>
-                                <li id="menu-item-1792"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1792"><a
-                                        title="												" href="http://gracethemesdemo.com/makeup/about-us/">About
-                                        Us</a></li>
-                                <li id="menu-item-1793"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1793"><a
-                                        title="												"
-                                        href="http://gracethemesdemo.com/makeup/photo-gallery/">Photo Gallery</a></li>
-                                <li id="menu-item-1788"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788"><a
-                                        title="												" href="http://gracethemesdemo.com/makeup/contact-us/">Book
-                                        an Appointment</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
+                        </div><br> -->
 
 
-                    <div class="widget-column-3">
-                        <h5>Contact Info</h5>
-
-                        <div class="contactdetail">
-                            <div class="ftraddbox">
-                                <p>Address: &nbsp;&nbsp; 732/21 Second Street, Manchester, UK</p>
+                            <div class="owl-stage-outer">
+                                <div class="lazy slider" data-sizes="50vw" style="width: 90%; margin:0">
+                                    <div>
+                                      <img src="images/websiteresources/01.jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/01 (1).jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/11.1.jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/mbc_02.jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/mbc_105.jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/mbc_99.jpg">
+                                    </div>
+                                    <!-- <div>
+                                      <img src="images/websiteresources/">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/01.jpg">
+                                    </div>
+                                    <div>
+                                      <img src="images/websiteresources/01.jpg">
+                                    </div> -->
+                                </div>
                             </div>
 
 
-                            <p>Phone: &nbsp; 345-677-554</p>
-
-                            <p>Email: &nbsp;&nbsp; info@sitename.com</p>
-
-                            <p>Web:&nbsp;&nbsp;&nbsp;&nbsp; http://sitename.com</p>
 
                         </div>
-                        <div class="clear"></div>
+                    </div><!-- .end section class -->
+                    <div class="clear"></div>
+                </div><!-- container -->
+        </section>
+    </div>
 
+    <div id="footer-wrapper">
+        <div class="container footer">
+
+            <!-- =============================== Column One - 1 =================================== -->
+
+            <!-- =============================== Column Fourth - 4 =================================== -->
+
+            <div class="cols-4">
+
+                <div class="widget-column-1">
+                    <h5>About Us</h5>
+                    <p>Aenean sit amet leo scel consectetur hendrerit. Sed facilisis at sedrutrum. In finibus ex nec
+                        odio egestas, veauct urna varius. Aenean tempor varius.</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" class="fab fa-facebook-f"></a>
+                        <a href="#" target="_blank" class="fab fa-twitter"></a>
+                        <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
+                        <a href="#" target="_blank" class="fab fa-google-plus-g"></a>
                     </div>
 
+                </div>
 
-                    <div class="widget-column-4">
+                <div class="widget-column-2">
+                    <h5>Useful Links</h5>
+                    <div class="menu-footer-menu-container">
+                        <ul id="menu-footer-menu" class="menu">
+                            <li id="menu-item-8"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-8">
+                                <a title="												" href="http://gracethemesdemo.com/makeup/"
+                                    aria-current="page">Home</a></li>
+                            <li id="menu-item-1792"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1792"><a
+                                    title="												" href="http://gracethemesdemo.com/makeup/about-us/">About
+                                    Us</a></li>
+                            <li id="menu-item-1793"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1793"><a
+                                    title="												" href="http://gracethemesdemo.com/makeup/photo-gallery/">Photo
+                                    Gallery</a></li>
+                            <li id="menu-item-1788"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1788"><a
+                                    title="												" href="http://gracethemesdemo.com/makeup/contact-us/">Book
+                                    an Appointment</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="widget-column-3">
+                    <h5>Contact Info</h5>
+
+                    <div class="contactdetail">
+                        <div class="ftraddbox">
+                            <p>Address: &nbsp;&nbsp; 732/21 Second Street, Manchester, UK</p>
+                        </div>
+
+
+                        <p>Phone: &nbsp; 345-677-554</p>
+
+                        <p>Email: &nbsp;&nbsp; info@sitename.com</p>
+
+                        <p>Web:&nbsp;&nbsp;&nbsp;&nbsp; http://sitename.com</p>
+
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+
+
+                <!-- <div class="widget-column-4">
                         <h5>Our Lookbook</h5>
                         <div class="photobooth">
                             <div class="row threecol portfoliowrap">
@@ -1858,28 +2302,28 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
 
-
-                    <div class="clear"></div>
-                </div>
-                <!--end .cols-4-->
 
                 <div class="clear"></div>
-
             </div>
-            <!--end .container-->
+            <!--end .cols-4-->
 
-            <div class="copyright-wrapper">
-                <div class="container">
-                    <div class="copyright-txt">Copyright © 2019. All rights reserved</div>
-                    <!-- <div class="design-by">Design by <a href="https://gracethemes.com" target="_blank">Grace Themes</a> -->
-                </div>
-                <div class="clear"></div>
-            </div>
+            <div class="clear"></div>
+
         </div>
+        <!--end .container-->
+
+        <div class="copyright-wrapper">
+            <div class="container">
+                <div class="copyright-txt">Copyright © 2019. All rights reserved</div>
+                <!-- <div class="design-by">Design by <a href="https://gracethemes.com" target="_blank">Grace Themes</a> -->
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 
     </div>
     <div id="back-top" style="">
@@ -1895,6 +2339,72 @@
         <script src="js/customize-preview.js"></script>
         <script src="js/navigation.js"></script> -->
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $(".vertical-center-4").slick({
+                dots: true,
+                vertical: true,
+                centerMode: true,
+                slidesToShow: 4,
+                slidesToScroll: 2
+            });
+            $(".vertical-center-3").slick({
+                dots: true,
+                vertical: true,
+                centerMode: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $(".vertical-center-2").slick({
+                dots: true,
+                vertical: true,
+                centerMode: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            });
+            $(".vertical-center").slick({
+                dots: true,
+                autoplay: true,
+                infinite: true,
+                vertical: true,
+                centerMode: true,
+                lazyLoad: 'ondemand',
+            });
+            $(".vertical").slick({
+                dots: true,
+                vertical: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $(".regular").slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $(".center").slick({
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                slidesToShow: 5,
+                slidesToScroll: 3
+            });
+            $(".variable").slick({
+                dots: true,
+                infinite: true,
+                variableWidth: true
+            });
+            $(".lazy").slick({
+                dots: true,
+                lazyLoad: 'ondemand', // ondemand progressive anticipated
+                infinite: true,
+                autoplay: true,
+                centerMode: true,
+                arrows: false,  
+            });
+        });
+    </script>
     <script type="text/javascript" src="js/jquery/ui/core.min.js"></script>
     <script type="text/javascript" src="js/ui/datepicker.min.js"></script>
     <script type="text/javascript">
