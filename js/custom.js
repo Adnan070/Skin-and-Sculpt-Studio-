@@ -1,16 +1,16 @@
 jQuery(document).ready( function(){
 	var ww = jQuery(window).width();	
-	jQuery("area[rel^='prettyPhoto']").prettyPhoto();
-	jQuery(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
-	jQuery("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
-		custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
-		changepicturecallback: function(){ initialize(); }
-	});
-	jQuery("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
-		custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
-		changepicturecallback: function(){ _bsap.exec(); }
-	});
+	// jQuery("area[rel^='prettyPhoto']").prettyPhoto();
+	// jQuery(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
+	// jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+	// jQuery("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+	// 	custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+	// 	changepicturecallback: function(){ initialize(); }
+	// });
+	// jQuery("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+	// 	custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+	// 	changepicturecallback: function(){ _bsap.exec(); }
+	// });
 
 	// accordion
     jQuery('.accordion-box .acc-content').hide();
@@ -53,35 +53,35 @@ jQuery(document).ready( function(){
 });
 
 jQuery(window).load(function() { 
-   jQuery('#testimonials .quotes').quovolver({
-      children    : 'div',
-      transitionSpeed : 600,
-      autoPlay    : true,
-	  autoPlaySpeed:6000,
-      equalHeight   : false,
-      navPosition   : 'below',
-      navPrev     : true,
-      navNext     : true,
-      navNum      : true,
-      navText     : false,
-      navTextContent  : 'Quote @a of @b'
-    });    
+//    jQuery('#testimonials .quotes').quovolver({
+//       children    : 'div',
+//       transitionSpeed : 600,
+//       autoPlay    : true,
+// 	  autoPlaySpeed:6000,
+//       equalHeight   : false,
+//       navPosition   : 'below',
+//       navPrev     : true,
+//       navNext     : true,
+//       navNum      : true,
+//       navText     : false,
+//       navTextContent  : 'Quote @a of @b'
+//     });    
   });
 
 // NAVIGATION CALLBACK
 var ww = jQuery(window).width();
 jQuery(document).ready(function() { 
-	jQuery(".sitenav li a").each(function() {
-		if (jQuery(this).next().length > 0) {
-			jQuery(this).addClass("parent");
-		};
-	})
+	// jQuery(".sitenav li a").each(function() {
+	// 	if (jQuery(this).next().length > 0) {
+	// 		jQuery(this).addClass("parent");
+	// 	};
+	// })
 	
-	jQuery(".sitenav li a").each(function() {
-		if (jQuery(this).next().length > 0) {
-			jQuery(this).addClass("parent-2");
-		};
-	})
+	// jQuery(".sitenav li a").each(function() {
+	// 	if (jQuery(this).next().length > 0) {
+	// 		jQuery(this).addClass("parent-2");
+	// 	};
+	// })
 	
 	jQuery(".toggleMenu").click(function(e) { 
 		e.preventDefault();
@@ -158,57 +158,57 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function() { 
-  jQuery('.trending_wrapper').owlCarousel({
-    loop:true,
-	autoplay:false,
-    margin:30,
-    nav:true,
-	dots: false,
-		responsive:{
-			0:{
-				items:1
-			},			
-			768:{
-				items:2
-			},
-			800:{
-				items:3
-			},
-			1170:{
-				items:4
-			}
-		}
-	})
+//   jQuery('.trending_wrapper').owlCarousel({
+//     loop:true,
+// 	autoplay:false,
+//     margin:30,
+//     nav:true,
+// 	dots: false,
+// 		responsive:{
+// 			0:{
+// 				items:1
+// 			},			
+// 			768:{
+// 				items:2
+// 			},
+// 			800:{
+// 				items:3
+// 			},
+// 			1170:{
+// 				items:4
+// 			}
+// 		}
+// 	})
 });
 
 jQuery(document).ready(function() {    
-	jQuery('.fashion_rotator').owlCarousel({
-		loop:true,
-		autoplay:false,
-		dots:false,
-		margin:0,
-		nav:false,
-		responsive:{
-			0:{
-				items:1
-			},
-			768:{
-				items:3
-			},
-			1170:{
-				items:4
-			}
-		}
-	})
+	// jQuery('.fashion_rotator').owlCarousel({
+	// 	loop:true,
+	// 	autoplay:false,
+	// 	dots:false,
+	// 	margin:0,
+	// 	nav:false,
+	// 	responsive:{
+	// 		0:{
+	// 			items:1
+	// 		},
+	// 		768:{
+	// 			items:3
+	// 		},
+	// 		1170:{
+	// 			items:4
+	// 		}
+	// 	}
+	// })
 });
 
 
 
 jQuery(document).ready(function( jQuery ) {
-        jQuery('.counter').counterUp({
-            delay: 10,
-            time: 1000
-        });
+        // jQuery('.counter').counterUp({
+        //     delay: 10,
+        //     time: 1000
+        // });
   });
  
 
@@ -219,9 +219,9 @@ jQuery(".welcome_contentcolumn h3").html(words.slice(0, words.length - 2).join('
 });
 
 // video popup jQuery
-jQuery(document).ready(function( jQuery ) {
-     	jQuery(".youtube-link").grtyoutube({
-		autoPlay:true,
-		theme: "dark"
-	});
-  }); 
+// jQuery(document).ready(function( jQuery ) {
+//      	jQuery(".youtube-link").grtyoutube({
+// 		autoPlay:true,
+// 		theme: "dark"
+// 	});
+//   }); 
