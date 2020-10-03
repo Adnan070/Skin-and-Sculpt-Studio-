@@ -677,14 +677,15 @@
             padding: 40px 0;
             padding-bottom: 0;
         }
-        
-        .contact-us-container .contact-us-heading {
+
+        .contact-us-container .contact-us-heading,
+        .find .contact-us-heading {
             font-size: 75px;
             font-weight: bold;
             padding-bottom: 10px;
             text-align: center;
         }
-        
+
         .contact-us-container .contact-us {
             display: grid;
             min-height: 500px;
@@ -693,11 +694,10 @@
         }
 
         .contact-us-container .contact-us--1 .contact-us__img {
-            background-image: linear-gradient(to bottom left, 
-                #00adb3a2,
-                #85f1f5cb
-            ),
-            url(./images/websiteresources/contact-us.jpg);
+            background-image: linear-gradient(to bottom left,
+                    #00adb3a2,
+                    #85f1f5cb),
+                url(./images/websiteresources/contact-us.jpg);
             min-height: 200px;
         }
 
@@ -707,7 +707,7 @@
             background-repeat: no-repeat;
         }
 
-        
+
 
         .contact-us .contact-us__content {
             display: flex;
@@ -749,7 +749,7 @@
             border: none;
             outline: none;
         }
-        
+
         .contact-us__form .input-feild textarea {
             width: 100%;
             background-color: #eafcff;
@@ -772,6 +772,30 @@
             background-color: #00abb2;
         }
 
+        .find {
+            text-align: center;
+            padding: 10px 30px;
+        }
+
+        .find-us {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 10px 100px;
+            column-gap: 50px;
+        }
+
+        .find-us>div {
+            /* width: 400px; */
+            padding: 10px 0;
+            background-color: #f0f0f0;
+            -webkit-box-shadow: 8px 8px 4px 1px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 8px 8px 4px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 8px 8px 4px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .open-hours {
+            /* justify-self: self-end; */
+        }
 
         @media screen and (min-width: 768px) {
             .contact-banner-content h1 {
@@ -779,10 +803,24 @@
             }
         }
 
-        @media screen and (max-width: 767px) and (min-width: 481px) {
-            
+        @media screen and (max-width: 960px) {
+            .find-us {
+                grid-template-columns: 100%;
+                row-gap: 20px;
+            }
+        }
 
-            .contact-us-container .contact-us-heading {
+        @media screen and (max-width: 615px) {
+            .find-us {
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 767px) and (min-width: 481px) {
+
+
+            .contact-us-container .contact-us-heading,
+            .find .contact-us-heading  {
                 font-size: 45px;
             }
 
@@ -794,8 +832,11 @@
                 grid-template-columns: 1fr;
             }
 
+            
+
+ 
             .contact-us-container .contact-us .contact-us__img {
-                
+
                 min-height: 400px;
                 grid-row: 1;
             }
@@ -817,8 +858,9 @@
         }
 
         @media screen and (max-width: 480px) and (min-width: 301px) {
-            
-            .contact-us-container .contact-us-heading {
+
+            .contact-us-container .contact-us-heading,
+            .find .contact-us-heading  {
                 font-size: 30px;
             }
 
@@ -849,7 +891,8 @@
 
         @media screen and (max-width: 300px) {
 
-            .contact-us-container .contact-us-heading {
+            .contact-us-container .contact-us-heading,
+            .find .contact-us-heading  {
                 font-size: 30px;
             }
 
@@ -926,8 +969,8 @@
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795">
                                     <a title="												" href="/Services.html">Sevices</a></li>
                                 <li id="menu-item-1790"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790 current-menu-item current_page_item"><a
-                                        title="												" href="#">Contact Us</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790 current-menu-item current_page_item">
+                                    <a title="												" href="#">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -949,6 +992,31 @@
                 <p>Hello Sir Etc.</p>
             </div>
         </div>
+        <div class="find">
+            <h1 class="contact-us-heading">How to Find Us?</h1>
+            <div class="find-us">
+                <div class="open-hours">
+                    <h2>
+                        Open Hours
+                    </h2>
+                    <div>
+                        Mon-Fri: 9 AM – 6 PM<br>
+                        Saturday: 9 AM – 4 PM<br>
+                        Sunday: Closed
+                    </div>
+                </div>
+                <div class="contacts">
+                    <h2>
+                        Contacts
+                    </h2>
+                    <div>
+                        176 W street name, New York, NY 10014<br>
+                        Email: <span>info@yoursite.com</span><br>
+                        Telephone: <span>+1(800)123-4566</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="contact-us-container">
             <h1 class="contact-us-heading">Contact Us</h1>
@@ -962,7 +1030,7 @@
                         <h1 class="subtitle">Have any Query?</h1>
                     </div>
                     <div class="contact-us__paras">
-                        
+
                         <form action="/Contact.html" class="contact-us__form">
                             <div class="input-feild">
                                 <input type="text" placeholder="Your Name" />
@@ -973,7 +1041,7 @@
                             <div class="input-feild">
                                 <input type="text" placeholder="Subject" />
                             </div>
-                            <div class="input-feild" >
+                            <div class="input-feild">
                                 <textarea type="text" placeholder="Your Message"></textarea>
                             </div>
                             <div class="submit-btn">
