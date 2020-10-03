@@ -634,7 +634,7 @@
         }
     </style>
     <style type="text/css">
-        .service-banner {
+        .contact-banner {
             height: 25em;
             overflow: hidden;
             position: relative;
@@ -643,7 +643,7 @@
             background-position: center;
         }
 
-        .service-banner-overlay {
+        .contact-banner-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -652,7 +652,7 @@
             background-color: #024c5e77;
         }
 
-        .service-banner-content {
+        .contact-banner-content {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -665,7 +665,7 @@
             transform: translateX(-50%) translateY(-50%);
         }
 
-        .service-banner-content h1 {
+        .contact-banner-content h1 {
             color: #ffffff;
             display: block;
             font-weight: 800;
@@ -673,101 +673,59 @@
             margin-top: 10px;
         }
 
-        .services-container {
+        .contact-us-container {
             padding: 40px 0;
             padding-bottom: 0;
         }
-
-        .services-container .services-heading {
+        
+        .contact-us-container .contact-us-heading {
             font-size: 75px;
             font-weight: bold;
             padding-bottom: 10px;
             text-align: center;
         }
-
-        .services-container .service {
+        
+        .contact-us-container .contact-us {
             display: grid;
             min-height: 500px;
             grid-template-columns: 1fr 1fr;
+            background-color: #eafcff;
         }
 
-        .services-container .service--1 .service__img {
-            background-image: url(./images/websiteresources/S1.jpg);
+        .contact-us-container .contact-us--1 .contact-us__img {
+            background-image: linear-gradient(to bottom left, 
+                #00adb3a2,
+                #85f1f5cb
+            ),
+            url(./images/websiteresources/contact-us.jpg);
+            min-height: 200px;
         }
 
-        .services-container .service--2 .service__img {
-            background-image: url(./images/websiteresources/s2.jpg);
-        }
-
-        .services-container .service--3 .service__img {
-            background-image: url(./images/websiteresources/s3.jpg);
-        }
-
-        .services-container .service--4 .service__img {
-            background-image: url(./images/websiteresources/s4.jpg);
-        }
-
-        .services-container .service--5 .service__img {
-            background-image: url(./images/websiteresources/s2.jpg);
-        }
-
-        .services-container .service--6 .service__img {
-            background-image: url(./images/websiteresources/s2.jpg);
-        }
-
-        .services-container .service--7 .service__img {
-            background-image: url(./images/websiteresources/s2.jpg);
-        }
-
-        .services-container .service--8 .service__img {
-            background-image: url(./images/websiteresources/s2.jpg);
-        }
-
-
-
-        .services-container .design--1 .service__img {
+        .contact-us-container .design--1 .contact-us__img {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        .services-container .design--2 .service__img {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+        
 
-        .services-container .design--2 .service__content {
-            transform: rotate(360deg) scaleX(-1);
-        }
-
-        .design--2 .service__content .service__title img {}
-
-        .design--2 .service__content .service__title h1,
-        .design--2 .service__content .service__paras p,
-        .design--2 .service__content .service__paras .bullets>div h3,
-        .design--2 .service__content .service__paras .bullets>div div {
-            transform: scale(-1, 1);
-            text-align: right;
-        }
-
-        .service .service__content {
+        .contact-us .contact-us__content {
             display: flex;
             flex-direction: column;
             padding: 30px 30px;
         }
 
-        .service .service__content .service__title {
+        .contact-us .contact-us__content .contact-us__title {
             display: flex;
             align-items: center;
         }
 
-        .service__content .service__title img {
+        .contact-us__content .contact-us__title img {
             width: 70px;
             height: 70px;
         }
 
-        .service__content .service__title h1 {
+        .contact-us__content .contact-us__title h1 {
             font-size: 37px;
             padding: 0;
             margin: 0;
@@ -775,214 +733,146 @@
 
         }
 
-        .service__paras .bullets {
-            position: relative;
+        .contact-us__form {
+            padding: 20px 20px;
         }
 
-        .service__paras .bullets::before {
-            /* content: ' '; */
-            margin-right: 20px;
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            border-radius: 50%;
-            top: 4px;
-            left: 0;
-            position: absolute;
-            content: '';
+        .contact-us__form .input-feild {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #00abb2;
         }
 
-        .service__paras .bullet--1::before {
+        .contact-us__form .input-feild input {
+            background-color: #eafcff;
+            width: 100%;
+            border: none;
+            outline: none;
+        }
+        
+        .contact-us__form .input-feild textarea {
+            width: 100%;
+            background-color: #eafcff;
+            border: none;
+            outline: none;
+            min-height: 100px;
+            resize: none;
+        }
+
+        .contact-us__form .submit-btn input {
+            border: 2px solid #00abb2;
+            padding: 5px 20px;
+            color: #00abb2;
+            background-color: #fff;
+        }
+
+        .contact-us__form .submit-btn input:hover {
+            padding: 5px 20px;
+            color: #fff;
             background-color: #00abb2;
         }
 
-        .service__paras .bullet--2::before {
-            background-color: #ac0af7;
-        }
-
-        .service__paras .bullet--3::before {
-            background-color: #23d300;
-        }
-
-        .service__paras .bullet--4::before {
-            background-color: #fd2eae;
-        }
-
-        .bullets>div {
-            position: relative;
-            display: block;
-            /* margin-left: 85px; */
-            margin-left: 35px;
-            /* padding-top: 1px; */
-        }
-
-
-
 
         @media screen and (min-width: 768px) {
-            .service-banner-content h1 {
+            .contact-banner-content h1 {
                 font-size: 65px;
             }
         }
 
         @media screen and (max-width: 767px) and (min-width: 481px) {
-            .service::after {
-                content: 'X----------X----------X';
-                text-align: center;
-                padding-bottom: 25px;
-                font-weight: bold;
-                color: #00abb2;
-            }
+            
 
-            .services-container .services-heading {
+            .contact-us-container .contact-us-heading {
                 font-size: 45px;
             }
 
-            .service-banner-content h1 {
+            .contact-banner-content h1 {
                 font-size: 45px;
             }
 
-            .services-container .service {
+            .contact-us-container .contact-us {
                 grid-template-columns: 1fr;
             }
 
-            .services-container .service .service__img {
-                min-height: 200px;
+            .contact-us-container .contact-us .contact-us__img {
+                
+                min-height: 400px;
                 grid-row: 1;
             }
 
-            .design--2 .service__content .service__title h1,
-            .design--2 .service__content .service__paras p,
-            .design--2 .service__content .service__paras .bullets>div h3,
-            .design--2 .service__content .service__paras .bullets>div div {
-                transform: none;
-                text-align: left;
-            }
-
-            .services-container .design--2 .service__content {
-                transform: none;
-            }
-
-            .service__content .service__title img {
+            .contact-us__content .contact-us__title img {
                 width: 60px;
                 height: 60px;
             }
 
-            .service__content .service__title h1 {
+            .contact-us__content .contact-us__title h1 {
                 font-size: 25px;
                 font-weight: bolder;
                 text-align: left;
             }
 
-            .service__content .service__paras h2 {
+            .contact-us__content .contact-us__paras h2 {
                 font-size: 20px;
             }
         }
 
         @media screen and (max-width: 480px) and (min-width: 301px) {
-            .service::after {
-                content: 'X----------X----------X';
-                text-align: center;
-                padding-bottom: 25px;
-                font-weight: bold;
-                color: #00abb2;
-            }
-
-            .services-container .services-heading {
+            
+            .contact-us-container .contact-us-heading {
                 font-size: 30px;
             }
 
-            .service-banner-content h1 {
+            .contact-banner-content h1 {
                 font-size: 35px;
             }
 
-            .services-container .service {
-                grid-template-columns: 1fr;
+            .contact-us-container .contact-us {
+                grid-template-columns: 100%;
             }
 
-            .services-container .service .service__img {
-                min-height: 200px;
-                grid-row: 1;
-            }
 
-            .design--2 .service__content .service__title h1,
-            .design--2 .service__content .service__paras p,
-            .design--2 .service__content .service__paras .bullets>div h3,
-            .design--2 .service__content .service__paras .bullets>div div {
-                transform: none;
-                text-align: left;
-            }
-
-            .services-container .design--2 .service__content {
-                transform: none;
-            }
-
-            .service__content .service__title img {
+            .contact-us__content .contact-us__title img {
                 width: 40px;
                 height: 40px;
             }
 
-            .service__content .service__title h1 {
+            .contact-us__content .contact-us__title h1 {
                 font-size: 25px;
                 font-weight: bolder;
                 text-align: left;
             }
 
-            .service__content .service__paras h2 {
+            .contact-us__content .contact-us__paras h2 {
                 font-size: 20px;
             }
         }
 
         @media screen and (max-width: 300px) {
-            .service::after {
-                content: 'X----------X----------X';
-                text-align: center;
-                padding-bottom: 25px;
-                font-weight: bold;
-                color: #00abb2;
-            }
 
-            .services-container .services-heading {
+            .contact-us-container .contact-us-heading {
                 font-size: 30px;
             }
 
-            .service-banner-content h1 {
+            .contact-banner-content h1 {
                 font-size: 35px;
             }
 
-            .services-container .service {
-                grid-template-columns: 1fr;
+            .contact-us-container .contact-us {
+                grid-template-columns: 100%;
             }
 
-            .services-container .service .service__img {
-                min-height: 200px;
-                grid-row: 1;
-            }
-
-            .design--2 .service__content .service__title h1,
-            .design--2 .service__content .service__paras p,
-            .design--2 .service__content .service__paras .bullets>div h3,
-            .design--2 .service__content .service__paras .bullets>div div {
-                transform: none;
-                text-align: left;
-            }
-
-            .services-container .design--2 .service__content {
-                transform: none;
-            }
-
-            .service__content .service__title img {
+            .contact-us__content .contact-us__title img {
                 width: 40px;
                 height: 40px;
             }
 
-            .service__content .service__title h1 {
+            .contact-us__content .contact-us__title h1 {
                 font-size: 25px;
                 font-weight: bolder;
                 text-align: left;
             }
 
-            .service__content .service__paras h2 {
+            .contact-us__content .contact-us__paras h2 {
                 font-size: 20px;
             }
         }
@@ -1033,11 +923,11 @@
                                     class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home menu-item-7">
                                     <a href="./index.html" aria-current="page">Home</a></li>
                                 <li id="menu-item-1795"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795 current-menu-item current_page_item">
-                                    <a title="												" href="#">Services</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1795">
+                                    <a title="												" href="/Services.html">Sevices</a></li>
                                 <li id="menu-item-1790"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790"><a
-                                        title="" href="/Contact.html">Contact Us</a></li>
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1790 current-menu-item current_page_item"><a
+                                        title="												" href="#">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1050,38 +940,47 @@
 
         </div><!-- .header -->
 
-        <div class="service-banner">
-            <div class="service-banner-overlay"></div>
-            <div class="service-banner-content">
+        <div class="contact-banner">
+            <div class="contact-banner-overlay"></div>
+            <div class="contact-banner-content">
                 <h1>
-                    Our Speciality is Our Outstanding Service
+                    Our Speciality is Our Outstanding contact-us
                 </h1>
                 <p>Hello Sir Etc.</p>
             </div>
         </div>
 
-        <div class="services-container">
-            <h1 class="services-heading">Our Services</h1>
-            <div class=" service service--1 design--1">
-                <div class="service__img">
+        <div class="contact-us-container">
+            <h1 class="contact-us-heading">Contact Us</h1>
+            <div class=" contact-us contact-us--1 design--1">
+                <div class="contact-us__img">
                     <!-- <img src="" alt="" class="img"> -->
                 </div>
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">Post-Operative Lymphatic Drainage Treatment</h1>
+                <div class="contact-us__content">
+                    <div class="contact-us__title">
+                        <!-- <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon"> -->
+                        <h1 class="subtitle">Have any Query?</h1>
                     </div>
-                    <div class="service__paras">
-                        <p>Post Operative Lymphatic Drainage is Essential for Patients who&#39;ve recently
-                            undergone surgeries such as Tummy Tuck, BBL, Breast Augmentation &amp;
-                            Liposuction. Treatment can begin as soon as 24 hrs post operation, with
-                            approval of the doctor &amp; as long as there are no complications.</p>
-                        <h2>Heal Faster</h2>
-                        <p>Our Lymphatic drainage treatment helps promote tissue regeneration &amp;
-                            reduce the severity of scars.  The most significant benefit of lymphatic
-                            drainage after an operation is to prevent or alleviate swelling allowing skin to
-                            adhere to avoid sagging and unwanted wrinkling.</p>
-                        <p></p>
+                    <div class="contact-us__paras">
+                        
+                        <form action="/Contact.html" class="contact-us__form">
+                            <div class="input-feild">
+                                <input type="text" placeholder="Your Name" />
+                            </div>
+                            <div class="input-feild">
+                                <input type="email" placeholder="E-Mail Address" />
+                            </div>
+                            <div class="input-feild">
+                                <input type="text" placeholder="Subject" />
+                            </div>
+                            <div class="input-feild" >
+                                <textarea type="text" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="submit-btn">
+                                <input type="submit" value="Submit Message" />
+                            </div>
+                        </form>
+
                         <!-- <div class="bullets bullet--1">
                             <div>
                                 <h3>Hello this is First Bullet</h3>
@@ -1104,246 +1003,6 @@
                 </div>
             </div>
 
-            <div class=" service service--2 design--2">
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/lipo.png" alt="" class="icon">
-                        <h1 class="subtitle">Laser Lipo/Ilipo Body Sculpting-</h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Laser Lipo body sculpting is the latest Non invasive technological
-                            breakthrough in fat reduction. You can lose your unwanted inches without
-                            surgery and providing you an effective solution for stubborn, localized fat
-                            areas with no pain and minimal downtime. Using state-of-the-art Laser Like
-                            Lipo wavelength technology, this revolutionary treatment gently “melts” fat
-                            to help eliminate it from your body! After treatment, the unwanted fat is
-                            naturally removed from the body through your digestive and lymphatic
-                            systems. You can treat fat on almost any area of your body with Non
-                            Invasive Laser Lipo body sculpting. The most commonly treated areas with
-                            Laser Lipo are: thighs, upper arms, love handles, chin, neck, buttocks, back
-                            and stomach. Treatment times with Laser Lipo will vary depending on what
-                            are you are treating.</p>
-                        <p>Non Invasive Laser Lipo body sculpting can help you trim unwanted inches
-                            and can also be used to:</p>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3>Reduce appearance of stretch marks</h3>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--2">
-                            <div>
-                                <h3>Sculpt and Contour “problem areas” of your the body</h3>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--3">
-                            <div>
-                                <h3>Reduce pain and inflammation</h3>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--4">
-                            <div>
-                                <h3>Reduce cellulite</h3>
-                                <div></div>
-                            </div>
-                        </div>
-
-                        <p>Full treatment is usually completed in 12-20 visits, but many can see some
-                            improvement after just a few sessions. Laser Lipo treatments are non-invasive and pain-free!
-                            For the best results, we recommend weekly sessions
-                            or alternating weekly with our RF or Ultrasound Cavitation depending on your
-                            desired results.</p>
-                    </div>
-                </div>
-
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-            </div>
-
-            <div class=" service service--3 design--1">
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">EndyMed Intensif-</h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Uses microneedling with radiofrequency; helps with acne scars, overall skin
-                            tightening, Stretch Marks, and pore sizing; stimulates collagen and elastin;
-                            faster healing time and more effective than microneedling.</p>
-                        <p>Endymed Intensif Pairs Microneedling with Radio Frequency
-                            Introducing the Intensif, the most technologically advanced RF treatment
-                            therapy available today. The Intensif treatment handpiece provides the most
-                            effective dermal skin remodeling, deep within the skin to revive and
-                            rejuvenate the natural production of new Collagen and elastin. Treatment
-                            with the Intensif triggers the skin’s natural healing process, rejuvenating and
-                            refreshing the skin while reducing the appearance of wrinkles, acne
-                            and traumatic scars in all skin types.</p>
-                        <h2>WHAT DOES IT DO?</h2>
-                        <p>The Intensif uses microneedling with radio frequency, which stimulates
-                            Collagen and Elastin production to yield tighter skin, improve cellulite and
-                            decrease wrinkles. It helps with acne scars, Stretch Marks overall skin
-                            tightening, and pore sizing. It stimulates collagen and elastin and has a
-                            healing time that is faster and more effective than regular microneedling.</p>
-                        <h2>The Intensif Advantage</h2>
-                        <p>These benefits are long lasting – with the Intensif, your skin will continue to
-                            improve up to a year after your last treatment session!</p>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3></h3>
-                                <div>The perfect minimally invasive option for the treatment of acne scars, deep
-                                    wrinkles, stretch marks and dilated pores. The Intensif offers consistent
-                                    results with minimal pain and downtime.</div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--2">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s sterile, high quality Gold Plated Microneedles are tiny (300
-                                    microns thin) and tapered to ensure a high level of efficacy and safety with
-                                    minimal discomfort.</div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--3">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s shock-free motion needle insertion mechanism allows for
-                                    minimal discomfort for effective and consistent treatments every time.</div>
-                            </div>
-                        </div>
-                        <div class="bullets bullet--4">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s proprietary Fractionated Pulse Mode (FPM) provides
-                                    enhanced heating volume for optimal collagen remodeling.</div>
-                            </div>
-                        </div>
-                        <h2>The Technology</h2>
-                        <p>3DEEP™️ targeted skin therapy implements the interaction of multiple energy
-                            sources for controlled delivery of energy to the dermis and hypodermis. The
-                            unique energy delivery mode minimizes the risk to the skin surface or
-                            surrounding tissue for an optimal aesthetic result. Selective phase-controlled
-                            heat delivery to the collagen fibers results in an immediate skin tightening
-                            followed by a second stage of collagen remodeling for anti-wrinkle effect.
-                            A Package of 8 is recommended to receive optimal benefits.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" service service--4 design--2">
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">ENDYMED 3DEEP BODY FACE/NECK TIGHTENING AND CONTOURING</h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Designed by experts in dermatology and RF technology, EndyMed tightening
-                            and contouring hand pieces are designed to deliver clinically proven
-                            effective treatments across a wide range of areas, providing the most in-
-                            demand aesthetic treatments today. An unparalleled experience, all
-                            EndyMed tightening and contouring treatments are 100% safe, comfortable
-                            and painless, suitable for all skin types and colors. Treatments offer
-                            immediate and long term superior results with no downtime.</p>
-                        <p>EndyMed’s 3DEEP®️ RF Facial Tightening handpieces are specifically
-                            designed for the treatment of wrinkles, tighten and lift sagging skin on the
-                            face and neck, including the forehead, cheeks, under the chin and neck.
-                            EndyMed’s facial tightening handpieces offer superior results, particularly in
-                            the delicate, sensitive and hard to treat areas around the eyes and mouth.</p>
-                        <p>EndyMed’s 3DEEP RF body contouring handpieces offer the most
-                            comprehensive and clinically proven body tightening and contouring
-                            treatments available today, with no discomfort, and very high patient
-                            satisfaction. EndyMed’s innovative body contouring handpieces offer
-                            superior solutions for cellulite and circumference reduction, shaping and
-                            contouring, with shorter treatment times and no treatment downtime.</p>
-                    </div>
-                </div>
-
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-            </div>
-            <div class=" service service--5 design--1">
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">Non invasive Brazilian Butt Lift-</h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Uses Vacuum therapy, 3D Lipo and/or radio frequency to build collagen,
-                            mobilize fat cells, to desired area while gradually lifting and plumping the
-                            buttocks.</p>
-                        <p>This procedure is permanent however it does take 10-12 sessions to
-                            permanently mobilize the fat cells to your specific desired areas.
-                        </p>
-                        <p>This treatment is a Non invasive alternative to a surgical BBL adding Volume
-                            to your Buttocks.</p>
-                        <p>This procedure is also great for correcting disproportioned Buttocks such as
-                            too much volume on the top or bottom or the dreaded
-                            “Hip Dips”.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" service service--6 design--2">
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">Cellulite Reduction- </h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>This procedure combines Vacuum Therapy, Wood Therapy, and Radio
-                            frequency to help break apart the dimples caused by cellulite and stimulate
-                            collagen production.</p>
-                    </div>
-                </div>
-
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-            </div>
-            <div class=" service service--7 design--1">
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">Wood Therapy </h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Wood Therapy Methods work to increase Lymphatic Drainage, speed up
-                            metabolism, Smooth Cellulite and sculpt and tone the body.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class=" service service--8 design--2">
-                <div class="service__content">
-                    <div class="service__title">
-                        <img src="./images/websiteresources/Lipo 2.png" alt="" class="icon">
-                        <h1 class="subtitle">Ultrasound Cavitation- </h1>
-                    </div>
-                    <div class="service__paras">
-                        <p>Fat Reduction through Ultrasound cavitation is a
-                            Non-Invasive Body Sculpting technique; performed as an alternative to
-                            liposuction/ fat reduction surgeries.</p>
-                        <p>This Body Contouring Method gives patients better-proportioned
-                            appearances with smoother contours and helps reduction in cellulite.</p>
-                    </div>
-                </div>
-
-                <div class="service__img">
-                    <!-- <img src="" alt="" class="img"> -->
-                </div>
-            </div>
         </div>
 
 

@@ -1180,7 +1180,7 @@ a.ReadMore:hover {
 .our_rates h4 span::after {
   border-bottom: 1px solid #4a4a4a;
   bottom: 10px;
-  content: "";
+  content: none;
   right: 60px;
   margin: auto;
   position: absolute;
@@ -2023,19 +2023,19 @@ ul.recent-post li .footerdate {
 
 /* footer 4 column css*/
 .cols-4 .widget-column-1 {
-  width: 24%;
+  width: 40%;
   float: left;
   margin: 0 4% 0 0;
   box-sizing: border-box;
 }
 .cols-4 .widget-column-2 {
-  width: 16%;
+  width: 20%;
   float: left;
   margin: 0 4% 0 0;
   box-sizing: border-box;
 }
 .cols-4 .widget-column-3 {
-  width: 24%;
+  width: 25%;
   float: left;
   margin: 0 4% 0 0;
   box-sizing: border-box;
@@ -3419,6 +3419,9 @@ p.price {
 }
 
 @media screen and (min-width: 768px) and (max-width: 868px) {
+  .header .container {
+    width: 100%;
+  }
   .news-box .news-thumb {
     height: 175px;
   }
@@ -3677,5 +3680,22 @@ p.price {
   .boxlayout .header.fixed {
     width: 1210px;
     margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width:767px) {
+  .header {
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .header_right {
+    padding: 0 10px;
+  }
+
+  .header .container {
+    width: 100%;
+    padding: 0;
   }
 }
