@@ -107,8 +107,8 @@ a {
   outline: none;
 }
 a:hover {
-  text-decoration: none;
-  outline: none;
+  text-decoration: none !important;
+ outline: none;
 }
 ul {
   list-style: none;
@@ -374,15 +374,21 @@ h5.headwidjet {
 }
 .toggle a {
   width: auto;
+  text-decoration: none !important;
   color: #ffffff;
-  background: url(../images/mobilenav.png) no-repeat right center #3e3e3e;
+  background: url(../images/mobilenav.png) no-repeat right center #008388;
   padding: 18px 25px;
   margin-top: 5px;
   font-size: 16px;
   text-align: left;
 }
+
+.toggle a:visited {
+  text-decoration: none !important;
+}
 .toggle a:hover {
-  color: #ffffff !important;
+  color: #fff !important;
+  background-color: #008388;
 }
 .header.fixed {
   position: fixed;
