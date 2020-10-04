@@ -108,7 +108,7 @@ a {
 }
 a:hover {
   text-decoration: none !important;
- outline: none;
+  outline: none;
 }
 ul {
   list-style: none;
@@ -3482,7 +3482,7 @@ p.price {
   }
   .header_right {
     float: right;
-    width: 75%;
+    width: 71%;
   }
   .footer h5 {
     font-size: 24px !important;
@@ -3690,16 +3690,56 @@ p.price {
   }
 }
 
+@media screen and (min-width: 421px) and (max-width: 680px) {
+  .header_right {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 10px;
+    justify-items: center;
+  }
+}
 
-@media screen and (max-width:767px) {
+@media screen and (min-width: 681px) {
+  .header_right {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 0 10px;
+    align-items: center;
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  .header_right {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 10px;
+    justify-items: center;
+    margin-bottom: 60px;
+  }
+
+  .header_right .infobox:first-child {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .break-line {
+    display: block;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 767px) {
   .header {
     padding: 0 !important;
     margin: 0;
   }
 
-  .header_right {
-    padding: 0 10px;
-  }
+
 
   .header .container {
     width: 100%;
