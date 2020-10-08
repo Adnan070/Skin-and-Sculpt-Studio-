@@ -742,13 +742,15 @@
             background-repeat: no-repeat;
         }
 
-        .services-container .design--2 .service__content {
-            transform: rotate(360deg) scaleX(-1);
+        .service__content .service__paras  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* transform: rotate(360deg) scaleX(-1); */
         }
 
-        .design--2 .service__content .service__title img {
-            
-        }
+        .design--2 .service__content .service__title img {}
+
         .design--2 .service__content .service__title h1 {
             text-align: center !important;
         }
@@ -757,26 +759,38 @@
         .design--2 .service__content .service__paras p,
         .design--2 .service__content .service__paras .bullets>div h3,
         .design--2 .service__content .service__paras .bullets>div div {
-            transform: scale(-1, 1);
-            text-align: right;
+            /* transform: scale(-1, 1); */
+            /* text-align: right; */
+        }
+
+        .service__content .service__paras .bullets-section {
+            text-align: justify;
+            max-width: 480px;
+        }
+
+        .design--2 .service__content .service__paras .bullets>div {
+            text-align: left !important;
         }
 
         .service .service__content {
             display: flex;
             flex-direction: column;
             padding: 30px 30px;
+            text-align: center;
         }
 
         .service .service__content .service__title {
             display: flex;
-            align-items: center !important;
             flex-direction: column;
+            padding-bottom: 20px;
+            align-items: center;
         }
 
         .service__content .service__title img {
             width: 70px;
             height: 70px;
             filter: brightness(10000) invert(10000%);
+            margin-bottom: 10px;
         }
 
         .service__content .service__title h1 {
@@ -794,11 +808,11 @@
         .service__paras .bullets::before {
             /* content: ' '; */
             margin-right: 20px;
-            width: 15px;
-            height: 15px;
+            width: 10px;
+            height: 10px;
             display: inline-block;
             border-radius: 50%;
-            top: 4px;
+            top: 6px;
             left: 0;
             position: absolute;
             content: '';
@@ -1013,13 +1027,17 @@
 
                 <div class="header_right">
                     <div class="infobox"><i class="fas fa-envelope-open-text"></i><a
-                            href="mailto:customerservice@Sculptandskinmedspa.com">customerservice@<span class="break-line">Sculptandskinmedspa.com</span></a></div>
-                    <div class="infobox"><i class="fas fa-phone-volume"></i>(+89) 530 - 352 - 3027</div>
+                            href="mailto:customerservice@Sculptandskinmedspa.com">customerservice@<span
+                                class="break-line">Sculptandskinmedspa.com</span></a></div>
+                    <div class="infobox"><i class="fas fa-phone-volume"></i>678-653-4852</div>
 
                     <div class="infobox">
                         <div class="social-icons">
-                            <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                            <a href="#" target="_blank" class="fab fa-twitter"></a>
+                            <a href="https://www.facebook.com/Sculpt-and-Skin-Studio-111247677401329/" target="_blank"
+                                class="fab fa-facebook-f"></a>
+                            <a href="https://www.instagram.com/sculptandskinstudio/" target="_blank" class="fab fa-instagram"></a>
+                            <!-- <a href="#" target="_blank" class="fab fa-google-plus-g"></a> -->
+                            <!-- <a href="#" target="_blank" class="fab fa-linkedin-in"></a> -->
                             <a href="#" target="_blank" class="fab fa-youtube"></a>
                         </div>
                     </div>
@@ -1133,28 +1151,30 @@
                             are you are treating.</p>
                         <p>Non Invasive Laser Lipo body sculpting can help you trim unwanted inches
                             and can also be used to:</p>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3>Reduce appearance of stretch marks</h3>
-                                <div></div>
+                        <div class="bullets-section">
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <div>Reduce appearance of stretch marks</div>
+                                    <div></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3>Sculpt and Contour “problem areas” of your the body</h3>
-                                <div></div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <div>Sculpt and Contour “problem areas” of your the body</div>
+                                    <div></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3>Reduce pain and inflammation</h3>
-                                <div></div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <div>Reduce pain and inflammation</div>
+                                    <div></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3>Reduce cellulite</h3>
-                                <div></div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <div>Reduce cellulite</div>
+                                    <div></div>
+                                </div>
                             </div>
                         </div>
 
@@ -1177,7 +1197,8 @@
                 </div>
                 <div class="service__content">
                     <div class="service__title">
-                        <img src="./images/websiteresources/Skin07-07-512.png" alt="" style="filter: brightness(.3);" class="icon">
+                        <img src="./images/websiteresources/Skin07-07-512.png" alt="" style="filter: brightness(.3);"
+                            class="icon">
                         <h1 class="subtitle">EndyMed Intensif</h1>
                     </div>
                     <div class="service__paras">
@@ -1201,34 +1222,36 @@
                         <h2>The Intensif Advantage</h2>
                         <p>These benefits are long lasting – with the Intensif, your skin will continue to
                             improve up to a year after your last treatment session!</p>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3></h3>
-                                <div>The perfect minimally invasive option for the treatment of acne scars, deep
-                                    wrinkles, stretch marks and dilated pores. The Intensif offers consistent
-                                    results with minimal pain and downtime.</div>
+                        <div class="bullets-section">
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <h3></h3>
+                                    <div>The perfect minimally invasive option for the treatment of acne scars, deep
+                                        wrinkles, stretch marks and dilated pores. The Intensif offers consistent
+                                        results with minimal pain and downtime.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s sterile, high quality Gold Plated Microneedles are tiny (300
-                                    microns thin) and tapered to ensure a high level of efficacy and safety with
-                                    minimal discomfort.</div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <h3></h3>
+                                    <div>The Intensif’s sterile, high quality Gold Plated Microneedles are tiny (300
+                                        microns thin) and tapered to ensure a high level of efficacy and safety with
+                                        minimal discomfort.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s shock-free motion needle insertion mechanism allows for
-                                    minimal discomfort for effective and consistent treatments every time.</div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <h3></h3>
+                                    <div>The Intensif’s shock-free motion needle insertion mechanism allows for
+                                        minimal discomfort for effective and consistent treatments every time.</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="bullets bullet--1">
-                            <div>
-                                <h3></h3>
-                                <div>The Intensif’s proprietary Fractionated Pulse Mode (FPM) provides
-                                    enhanced heating volume for optimal collagen remodeling.</div>
+                            <div class="bullets bullet--1">
+                                <div>
+                                    <h3></h3>
+                                    <div>The Intensif’s proprietary Fractionated Pulse Mode (FPM) provides
+                                        enhanced heating volume for optimal collagen remodeling.</div>
+                                </div>
                             </div>
                         </div>
                         <h2>The Technology</h2>
@@ -1369,10 +1392,12 @@
                         <p>Aenean sit amet leo scel consectetur hendrerit. Sed facilisis at sedrutrum. In finibus ex nec
                             odio egestas, veauct urna varius. Aenean tempor varius.</p>
                         <div class="social-icons">
-                            <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                            <a href="#" target="_blank" class="fab fa-twitter"></a>
-                            <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
-                            <a href="#" target="_blank" class="fab fa-google-plus-g"></a>
+                            <a href="https://www.facebook.com/Sculpt-and-Skin-Studio-111247677401329/" target="_blank"
+                                class="fab fa-facebook-f"></a>
+                            <a href="https://www.instagram.com/sculptandskinstudio/" target="_blank" class="fab fa-instagram"></a>
+                            <!-- <a href="#" target="_blank" class="fab fa-google-plus-g"></a> -->
+                            <!-- <a href="#" target="_blank" class="fab fa-linkedin-in"></a> -->
+                            <a href="#" target="_blank" class="fab fa-youtube"></a>
                         </div>
 
                     </div>
@@ -1386,12 +1411,11 @@
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-8">
                                         <a title="												" href="/" aria-current="page">Home</a></li>
                                     <li id="menu-item-1792"
-                                        class="menu-item current-menu-item current_page_item menu-item-type-post_type menu-item-object-page menu-item-1792"><a
-                                            title="												" href="/Services.html">Services</a></li>
+                                        class="menu-item current-menu-item current_page_item menu-item-type-post_type menu-item-object-page menu-item-1792">
+                                        <a title="												" href="/Services.html">Services</a></li>
                                     <li id="menu-item-1793"
-                                        class="menu-item  menu-item-type-post_type menu-item-object-page menu-item-1793"><a
-                                            title="												"
-                                            href="/Contact.html">Contact Us</a></li>
+                                        class="menu-item  menu-item-type-post_type menu-item-object-page menu-item-1793">
+                                        <a title="												" href="/Contact.html">Contact Us</a></li>
                                 </ul>
                         </div>
 
@@ -1403,11 +1427,11 @@
 
                         <div class="contactdetail">
                             <div class="ftraddbox">
-                                <p>Address: &nbsp;&nbsp; 732/21 Second Street, Manchester, UK</p>
+                                <p>Address: &nbsp;&nbsp; 275 Carpenter Dr NE Suite 308, Atlanta, GA 30328</p>
                             </div>
 
 
-                            <p>Phone: &nbsp; 345-677-554</p>
+                            <p>Phone: &nbsp; 678-653-4852</p>
 
                             <p>Email: &nbsp;&nbsp; customerservice@Sculptandskinmedspa.com</p>
 
