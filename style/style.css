@@ -3742,7 +3742,9 @@ p.price {
     justify-items: center;
     margin-bottom: 60px;
   }
-
+  .display__hidden {
+    display: none;
+  }
   .header_right .infobox:first-child {
     font-size: 13px;
     display: flex;
